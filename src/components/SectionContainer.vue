@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       texts:require("./../assets/js/templates/sections.js"),
-      textsw:require("./../assets/js/templates/sectionsw.js"),
+      //textsw:require("./../assets/js/templates/sectionsw.js"),
     }
   },
   methods: {
