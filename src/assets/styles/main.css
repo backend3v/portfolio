@@ -66,7 +66,7 @@ body{
     font-size: var(--textM);
     font-family: var(--font1);
     color:var(--colorNeutral);
-    overscroll-behavior: contain;
+    overscroll-behavior: none;
 }
 h1{
     padding: 0%;
