@@ -15,19 +15,21 @@ import ExamplesContainer from './sections/examples/examples.vue'
 
 import { getTexts } from '../assets/js/templates/sectionsw.js';
 import texts from '@/assets/js/texts/es';
+import sections from '@/assets/js/templates/sections.js';
 export default {
   
   name: 'SectionContainer',
   data() {
     return {
-      texts:require("./../assets/js/templates/sections.js"),
+      texts:sections,
       //textsw:require("./../assets/js/templates/sectionsw.js"),
     }
   },
   methods: {
     
     getSectionText(section) {
-      return this.texts.default.sections[section]
+      console.log(sections)
+      return sections.sections[section]
     },
 
     goToUrl(url){
@@ -38,6 +40,7 @@ export default {
 
     },
     mounted() {
+      console.log(sections)
       // this.texts.default.lang = "en"
       //this.texts.getTexts("en")
       //console.log(this.texts)
