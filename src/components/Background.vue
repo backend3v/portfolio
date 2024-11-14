@@ -22,6 +22,7 @@ export default {
   watch: {
     position: function (val) {
       this.render.position = val
+      console.log("44",val)
     }
   },
   methods: {

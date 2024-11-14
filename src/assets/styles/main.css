@@ -12,6 +12,7 @@
     --wFull: 100vw;
     --wFull2: 96.4vw;
     --hFullContainer: 90vh;
+    --hFullContainer2: 88vh;
     --hHalfContainer:42.5vh;
     --hRadius:45vh;
     --hFullSection: 82vh;
@@ -273,7 +274,17 @@ nav{
     small{
         font-size: var(--textS2)
     }
+    #container{
+        height: var(--hFullContainer2);
+    }
     
+    #containerSection{
+        height: var(--hFullContainer2);
+    }
+    
+    .section{
+        height: var(--hFullContainer2);;
+    }
 }
 @media(orientation:landscape){
     .containerSections{
@@ -306,5 +317,16 @@ nav{
     }
     small{
         font-size: var(--textS)
+    }
+    #container{
+        height: var(--hFullContainer);
+    }
+    
+    #containerSection{
+        height: var(--hFullContainer);
+    }
+    
+    .section{
+        height: var(--hFullContainer);;
     }
 }
