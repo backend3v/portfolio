@@ -8,7 +8,7 @@
                     .gridQuarterSections(class="gridSpaceS")
                         div(class="card",v-for="section in jobsSections")
                             .gridJobs(class="")
-                                .itemImage(class="headerCard")
+                                .itemImage(class="headerCard itemsCenter")
                                     img(class="imageM" :src="getUrl(paths.default[section.image])")
                                 h2(class="itemsCenter itemPlace headerCard")
                                     |{{ section.place }}
@@ -24,7 +24,7 @@
                     .gridHalfSections(class="gridSpaceS")
                         div(v-for="section in projectSections")
                             .gridProjects(class="card")
-                                .itemImage(class="headerCard")
+                                .itemImage(class="headerCard itemsCenter")
                                     img(class="imageL" :src="getUrl(paths.default[section.image])")
                                 h2(class="itemsCenter itemName headerCard")
                                     |{{ section.name }}
