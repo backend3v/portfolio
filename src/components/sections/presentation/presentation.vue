@@ -50,6 +50,7 @@ export default {
     data:Object,
   },
     mounted() {
+      console.log("444",this.data)
     },
   components: {
 

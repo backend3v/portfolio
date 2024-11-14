@@ -1,5 +1,6 @@
 import paths from './../config/paths/paths.js';
 import texts from './../texts/es.js';
+//import texts2 from './../texts/en.js';
 
 const sections = {
     lang:"es",

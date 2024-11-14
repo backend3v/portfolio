@@ -3,7 +3,7 @@ import * as THREE from 'three';
 class Render {
     background1="images/01.png"
     background2="images/02.png"
-    background='26,33,39'
+    background='11,18,24'//'26,33,39'
     alpha=0.5
     scene
     camera
@@ -11,7 +11,7 @@ class Render {
     light
     targetObserver
     //Ball
-    colorBaseBall='28,35,41'
+    colorBaseBall='31,38,44'//'28,35,41'
     colorCenterBall='31,38,44'
     cantBalls=100
     planes=[]
@@ -26,8 +26,8 @@ class Render {
     growDelay = 0.07
     nodeScale = 0.5
     //Background
-    colorBackground1='38,35,55'
-    colorBackground2='38,48,55'
+    colorBackground1='48,45,65'
+    colorBackground2='35,48,60'
     cube
     width
     height

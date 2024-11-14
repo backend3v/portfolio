@@ -1,4 +1,4 @@
-const texts = {
+const textsEn = {
     presentation:{
         title:"Presentation",
         contact:"Contact",
@@ -40,4 +40,4 @@ const texts = {
         title:"Ejemplos"
     }
   };
-export default texts;
+export default textsEn;
