@@ -45,7 +45,7 @@ export default {
       let direction = "up"
       console.log("33",e.targetTouches[0].pageY)
       this.actualPosition = e.targetTouches[0].pageY
-      if(this.actualPosition > this.prevPosition){
+      if(this.actualPosition >= this.prevPosition){
         direction = "up"
       }else{
         direction = "down"
