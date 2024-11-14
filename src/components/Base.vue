@@ -23,20 +23,52 @@ export default {
       visibleSections:["presentation", "skills"],
       changed:true,
       sections:["presentation", "skills", "jobs", "examples"],
-      
+      prevPosition:0,
+      actualPosition:0
     }
   },
   methods: {
-      scrolling(event){
-        let whell = event.deltaY
-        if(whell >= 0){
-            this.position = (this.position + 1 > 119) ? 0 : this.position + 1
-            this.direction = "down"
+    scrolling2(e){
+      console.log(e)
+    } ,
+    whelling(e){
+      let direction = "down"
+      const whell = e.deltaY
+      if(whell >= 0){
+        direction = "down"
+      }else{
+        direction = "up"
+      }
+      this.scrolling(direction)
+    },
+    touchinMove(e){
+      let direction = "up"
+      console.log("33",e.targetTouches[0].pageY)
+      this.actualPosition = e.targetTouches[0].pageY
+      if(this.actualPosition > this.prevPosition){
+        direction = "up"
+      }else{
+        direction = "down"
+      }
+      this.scrolling(direction)
+      this.prevPosition = this.actualPosition
+    } ,
+    scrolling(direction){
+        // let whell = event.deltaY
+        // if(whell >= 0){
+        //     this.position = (this.position + 1 > 119) ? 0 : this.position + 1
+        //     this.direction = "down"
+        // }else{
+        //     this.position = (this.position - 1 < 0) ? 119 : this.position - 1
+        //     this.direction = "up"
+        // }
+        if(direction == "down"){
+          this.position = (this.position + 1 > 119) ? 0 : this.position + 1
+          this.direction = "down"
         }else{
-            this.position = (this.position - 1 < 0) ? 119 : this.position - 1
-            this.direction = "up"
+          this.position = (this.position - 1 < 0) ? 119 : this.position - 1
+          this.direction = "up"
         }
-
         if((this.position > 105 && this.position <= 119) || (this.position >= 0 && this.position <= 15)){
           this.section = "presentation"
           if(this.position >=0 && this.position <= 15){
@@ -93,7 +125,9 @@ export default {
 
     },
     mounted() {
-        window.onwheel = this.scrolling
+        window.onwheel = this.whelling
+        window.onscroll = this.scrolling2
+        window.ontouchmove = this.touchinMove
         const elementSection = document.getElementById("jobs")
         elementSection.style.visibility = "hidden"
         const elementJoinSection = document.getElementById("examples")

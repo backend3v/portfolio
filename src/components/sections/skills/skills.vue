@@ -6,7 +6,7 @@
           h2(class="headerSection itemsCenter")
             |{{ title }}
         .sectionSide
-          div(class="gridHalfSections gridSpaceM")
+          div(class="gridHalfSections gridSpaceS")
             div(class="card gridSectionsSkills" v-for="section in data.content")
               div(class="itemsCenter itemImage headerCard")
               h2(class="itemsCenter itemSection headerCard")

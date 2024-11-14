@@ -13,7 +13,7 @@
               p(class="itemsCenter sectionM")
                 | {{ about }}
           .sectionSide
-            div(class="gridHalfSections gridSpaceM")
+            div(class="gridHalfSections gridSpaceS")
               div(class="itemsCenter card" v-for="contacth in data.content.contact")
                   h2(class="headerCard itemsCenter sectionS")
                     |{{ contacth.name }}

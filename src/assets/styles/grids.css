@@ -121,8 +121,8 @@
         grid-template-columns: var(--wQuarter2) var(--wQuarter2);
     }
     .gridSpaceS{
-        grid-column-gap: var(--wXXXS);
-        grid-row-gap: var(--hXXXS);
+        grid-column-gap: var(--wXXS);
+        grid-row-gap: var(--hXXS);
     }
     .gridSpaceM{
         grid-column-gap: var(--wXS);

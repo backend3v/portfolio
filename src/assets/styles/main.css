@@ -1,15 +1,21 @@
 :root{
     --colorMain: rgb(46,53,59);
     --colorMainW: rgb(56,63,69);
-    --colorTransparent: rgba(0,0,255,1);
+    --colorTransparent: rgba(0,0,0,1);
     --colorBackCard: rgba(46,53,59,0.3);
+    --colorSkills:rgb(153, 255, 153);
+    --colorJobs:rgb(153, 153, 255);
+    --colorExamples:rgb(255, 153, 102);
+    --colorPresentation:rgb(102, 255, 255);
+    --colorAccent:rgb(245, 245, 245);
+    --colorNeutral:rgb(225, 225, 225);
     --wFull: 100vw;
-    --wFull2: 97vw;
+    --wFull2: 96.4vw;
     --hFullContainer: 90vh;
     --hHalfContainer:42.5vh;
     --hRadius:45vh;
     --hFullSection: 82vh;
-    --textS: 0.3vh;
+    --textS: 0.5vh;
     --textM: 1.35vh;
     --textL: 1.5vh;
     --textXL: 2vh;
@@ -19,13 +25,13 @@
     --textL2: 1.5vw;
     --textXL2: 2vw;
     --textXXL2: 3vw;
-    --wSix:16.2vw;
-    --wSix2:32vw;
+    --wSix:15.9vw;
+    --wSix2:30.99vw;
     --wQuarter:23.8vw;
-    --wQuarter2:48.2vw;
-    --wHalf:48.5vw;
-    --wHalf2:47vw;
-    --hXXXS:0.3vh;
+    --wQuarter2:47.6vw;
+    --wHalf:49vw;
+    --wHalf2:47.5vw;
+    --hXXXS:0.5vh;
     --hXXS:1vh;
     --hXS:3vh;
     --hHS:2.5vw;
@@ -37,7 +43,7 @@
     --wIM:6vw;
     --hIXM:7vh;
     --wIXM:7vw;
-    --wXXXS:0.3vw;
+    --wXXXS:0.5vw;
     --wXXS:1vh;
     --wXS:3vw;
     --wHS:2.5vw;
@@ -48,6 +54,9 @@
     --hHalf:50vh;
     --hHalf2:28vh;
     --hHalf3:11.5vh
+    --font1:'Sarpanch',
+    --font2: 'Orbitron',
+    --font3: 'Wire One',
 }
 
 body{
@@ -55,11 +64,14 @@ body{
     margin: 0% ;
     background-color: var(--colorMain);
     font-size: var(--textM);
+    font-family: var(--font1);
+    color:var(--colorNeutral)
 }
 h1{
     padding: 0%;
     margin: 0% ;
     font-size: var(--textXXL);
+    color:var(--colorAccent)
 }
 h2{
     padding: 0%;
@@ -151,26 +163,34 @@ nav{
     background-color: var(--colorMainW);
 }
 #presentation{ 
-    color: #ff5733; 
     transform: translateZ(var(--hRadius));
     /* background-color: rgba(0,0,255,1); */
 
 }
+#presentation h2{
+    color:var(--colorPresentation)
+}
 #jobs{ 
-    color: #33c3ff; 
     transform: rotateY(180deg) rotateZ(180deg) translateZ(var(--hRadius)); 
     /* background-color: rgba(0,255,0,1); */
 }
+#jobs h2{
+    color:var(--colorJobs)
+}
 #examples{ 
-    color: #ffcc33; 
     transform: rotateX(90deg) translateZ(var(--hRadius));
     /* background-color: rgba(255,522,0,1); */
 
 }
+#examples h2{
+    color:var(--colorExamples)
+}
 #skills{ 
-    color: #787e79; 
     transform: rotateX(-90deg) translateZ(var(--hRadius)); 
     /* background-color: rgba(255,0,0,1); */
+}
+#skills h2{
+    color:var(--colorSkills)
 }
 
 
@@ -224,6 +244,9 @@ nav{
     .containerSections{
         display: block;
     }
+    .sectionSingle{
+        width: var(--wFull2);
+    }
     .sectionSide{
         height: var(--hHalfContainer);
         width: var(--wFull2);
@@ -254,6 +277,9 @@ nav{
 @media(orientation:landscape){
     .containerSections{
         display: flex;
+    }
+    .sectionSingle{
+        width: var(--wFull);
     }
     .sectionSide{
         height: var(--hFullSection);
