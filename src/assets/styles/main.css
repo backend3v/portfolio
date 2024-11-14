@@ -65,7 +65,8 @@ body{
     background-color: var(--colorMain);
     font-size: var(--textM);
     font-family: var(--font1);
-    color:var(--colorNeutral)
+    color:var(--colorNeutral);
+    overscroll-behavior: contain;
 }
 h1{
     padding: 0%;
