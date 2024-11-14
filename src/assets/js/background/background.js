@@ -193,9 +193,9 @@ class Render {
     }
     movesc(){
         //this.f.rotation.x =THREE.Math.degToRad(this.position) * 3
-        this.ball.rotation.x =THREE.Math.degToRad(this.position) * 3
+        this.ball.rotation.x =THREE.Math.degToRad(this.position)
         const container = document.getElementById("containerSection")
-        const degres = this.position * 3
+        const degres = this.position
         container.style.transform= `rotateX(${degres}deg)`
     }
     animate() {

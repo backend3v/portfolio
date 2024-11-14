@@ -34,11 +34,13 @@ export default {
     whelling(e){
       let direction = "down"
       const whell = e.deltaY
-      if(whell >= 0){
+      if(whell > 0){
         direction = "down"
       }else{
         direction = "up"
       }
+      this.scrolling(direction)
+      this.scrolling(direction)
       this.scrolling(direction)
     },
     touchinMove(e){
@@ -63,39 +65,39 @@ export default {
         //     this.direction = "up"
         // }
         if(direction == "down"){
-          this.position = (this.position + 1 > 119) ? 0 : this.position + 1
+          this.position = (this.position + 1 > 359) ? 0 : this.position + 1
           this.direction = "down"
         }else{
-          this.position = (this.position - 1 < 0) ? 119 : this.position - 1
+          this.position = (this.position - 1 < 0) ? 359 : this.position - 1
           this.direction = "up"
         }
-        if((this.position > 105 && this.position <= 119) || (this.position >= 0 && this.position <= 15)){
+        if((this.position > 315 && this.position <= 359) || (this.position >= 0 && this.position <= 45)){
           this.section = "presentation"
-          if(this.position >=0 && this.position <= 15){
+          if(this.position >=0 && this.position <= 45){
             this.joinSection = "skills"
           }else{
             this.joinSection = "examples"
           }
         }
-        else if(this.position > 15 && this.position <= 45){
+        else if(this.position > 45 && this.position <= 135){
           this.section = "skills"
-          if(this.position <= 30){
+          if(this.position <= 90){
             this.joinSection = "presentation"
           }else{
             this.joinSection = "jobs"
           }
         }
-        else if(this.position > 45 && this.position <= 75){
+        else if(this.position > 135 && this.position <= 225){
           this.section = "jobs"
-          if(this.position <= 60){
+          if(this.position <= 180){
             this.joinSection = "skills"
           }else{
             this.joinSection = "examples"
           }
         }
-        else if(this.position > 75 && this.position <= 105){
+        else if(this.position > 225 && this.position <= 315){
           this.section = "examples"
-          if(this.position <= 90){
+          if(this.position <= 270){
             this.joinSection = "jobs"
           }else{
             this.joinSection = "presentation"
