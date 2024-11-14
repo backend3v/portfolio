@@ -1,0 +1,168 @@
+
+
+.gridHalfSections{
+    display: grid;
+    grid-template-columns: var(--wHalf);
+}
+.gridQuarterSections{
+    display: grid;
+    grid-template-columns: var(--wQuarter) var(--wQuarter);
+    
+}
+.gridSixSections{
+    display: grid;
+    grid-template-columns: var(--wSix) var(--wSix) var(--wSix);
+    
+}
+.gridSpaceS{
+    grid-column-gap: var(--wXXXS);
+    grid-row-gap: var(--hXXXS);
+}
+
+.gridSpaceM{
+    grid-column-gap: var(--wXS);
+    grid-row-gap: var(--hXS);
+}
+.gridSpaceL{
+    grid-column-gap: var(--wXS);
+    grid-row-gap: var(--hXS);
+}
+
+.itemImage{
+    grid-area: image;
+}
+.itemPlace{
+    grid-area: place;
+}
+.itemPosition{
+    grid-area: position;
+}
+.itemCity{
+    grid-area: city;
+}
+.itemDate{
+    grid-area: date;
+}
+.itemDescription{
+    grid-area: description;
+}
+.itemSection{
+    grid-area: section;
+}
+.itemBar{
+    grid-area: bar;
+}
+.itemName{
+    grid-area: name;
+}
+.gridJobs{
+    display: grid;
+    grid-template:
+      'image place place place'
+      'image city city date'
+      'position position position position'
+      'description description description description';
+    grid-template-rows: var(--hXS) var(--hXS) var(--hXS) var(--hXS);
+    grid-template-columns: var(--wS) auto auto auto;
+  }
+.gridSectionsSkills{
+    display: grid;
+    grid-template:
+      'image section section section'
+      'description description description description';
+    grid-template-rows: var(--hXS) var(--hL);
+    grid-template-columns: var(--wXS) auto auto auto;
+  }
+
+.gridSkills{
+    display: grid;
+    grid-template:
+      'image name name'
+      'image description description';
+    grid-template-rows: var(--hXS) var(--hM);
+    grid-template-columns: var(--wSM) auto auto;
+  }
+
+
+.gridProjects{
+    display: grid;
+    grid-template:
+      'image name name name'
+      'image description description description';
+    grid-template-rows: var(--hXS) var(--hM);
+    grid-template-columns: var(--wM) auto auto auto;
+  }
+
+
+
+.gridExamples{
+    display: grid;
+    grid-template:
+    'menu bar bar bar'
+    'menu section section section';
+      
+    grid-template-rows: var(--hS) auto;
+    grid-template-columns: var(--wL) auto auto auto;
+  }
+  @media(orientation:portrait){
+    .gridHalfSections{
+        grid-template-columns: var(--wHalf2) var(--wHalf2);
+    }
+    .gridSixSections{
+        display: grid;
+        grid-template-columns: var(--wSix2) var(--wSix2) var(--wSix2);
+    }
+    .gridSkills{
+        grid-template-rows: var(--hXS) var(--hS);
+        grid-template-columns: var(--wSM) auto auto;
+    }
+    .gridQuarterSections{
+        display: grid;
+        grid-template-columns: var(--wQuarter2) var(--wQuarter2);
+    }
+    .gridSpaceS{
+        grid-column-gap: var(--wXXXS);
+        grid-row-gap: var(--hXXXS);
+    }
+    .gridSpaceM{
+        grid-column-gap: var(--wXS);
+        grid-row-gap: var(--hXS);
+    }
+    .gridSpaceL{
+        grid-column-gap: var(--wS);
+        grid-row-gap: var(--hS);
+    }
+}
+@media(orientation:landscape){
+    .gridHalfSections{
+        grid-template-columns:  var(--wHalf) ;
+    }
+    .gridSixSections{
+        display: grid;
+        grid-template-columns: var(--wSix) var(--wSix) var(--wSix);
+    }
+    .gridSkills{
+        grid-template-rows: var(--hXS) var(--hM);
+        grid-template-columns: var(--wSM) auto auto;
+    }
+    .gridJobs{
+        grid-template-rows: var(--hXS) var(--hXS) var(--hXS) var(--hXS);
+        grid-template-columns: var(--wS) auto auto auto;
+    }
+    .gridQuarterSections{
+        display: grid;
+        grid-template-columns: var(--wQuarter) var(--wQuarter);
+    }
+    .gridSpaceS{
+        grid-column-gap: var(--wXXXS);
+        grid-row-gap: var(--hXXXS);
+    }
+    .gridSpaceM{
+        grid-column-gap: var(--wXXXS);
+        grid-row-gap: var(--hXXXS);
+    }
+    .gridSpaceL{
+        grid-column-gap: var(--wXS);
+        grid-row-gap: var(--hXS);
+    }
+}

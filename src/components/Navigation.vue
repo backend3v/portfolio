@@ -7,14 +7,20 @@
             |Habilidades
         a( href="#" )
             |Trabajos
-        a( href="#" )
+        a(class="objmenu" href="#" )
             |Ejemplo
+        div
+          |{{this.$parent.position}} - 
+          |{{this.$parent.section}} -
+          |{{this.$parent.joinSection}} -
+          |{{this.$parent.changed}}
 </template>
 
 <script>
 
 export default {
   name: 'NavigationBar',
+  
 }
 </script>
 
