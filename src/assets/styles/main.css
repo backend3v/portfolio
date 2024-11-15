@@ -100,7 +100,7 @@ small{
     display: grid ;
 }
 .footerContainer{
-    height: var(--hS);
+    height: var(--hXS);
     width: var(--wFull);
     background-color: var(--colorMain);
     position: absolute;
