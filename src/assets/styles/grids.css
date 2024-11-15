@@ -58,11 +58,10 @@
 .gridJobs{
     display: grid;
     grid-template:
-      'image place place place'
-      'image city city date'
-      'position position position position'
+      'image place place date'
+      'image position position city'
       'description description description description';
-    grid-template-rows:var(--hHS) var(--hXXS) var(--hXXS) var(--hSM);
+    grid-template-rows:var(--hHS) var(--hXXS) var(--hM);
     grid-template-columns: var(--wS) auto auto auto;
   }
 .gridSectionsSkills{
@@ -70,7 +69,7 @@
     grid-template:
       'image section section section'
       'description description description description';
-    grid-template-rows: var(--hXS) var(--hL);
+    grid-template-rows: var(--hXS) var(--hXL);
     grid-template-columns: var(--wXS) auto auto auto;
   }
 
@@ -89,7 +88,7 @@
     grid-template:
       'image name name name'
       'image description description description';
-    grid-template-rows: var(--hXS) var(--hM);
+    grid-template-rows: var(--hXS) var(--hL);
     grid-template-columns: var(--wM) auto auto auto;
   }
 

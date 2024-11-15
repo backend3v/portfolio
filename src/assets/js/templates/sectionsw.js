@@ -145,7 +145,7 @@ class Sections{
                     {
                         place:this.langTexts.jobs.jobs[1]["name"],
                         position:this.langTexts.jobs.jobs[1]["position"],
-                        city:"Miami, Florida (remoto)",
+                        city:"Miami, Florida",
                         description:this.langTexts.jobs.jobs[1]["description"],
                         date:"2018-2019",
                         image:paths["none"]
@@ -154,7 +154,7 @@ class Sections{
                     {
                         place:this.langTexts.jobs.jobs[2]["name"],
                         position:this.langTexts.jobs.jobs[2]["position"],
-                        city:"Fort Lauderdale, Florida (remoto)",
+                        city:"Fort Lauderdale, Florida",
                         description:this.langTexts.jobs.jobs[2]["description"],
                         date:"2020",
                         image:paths.jobs["biznaga"]
@@ -163,7 +163,7 @@ class Sections{
                     {
                         place:this.langTexts.jobs.jobs[3]["name"],
                         position:this.langTexts.jobs.jobs[3]["position"],
-                        city:"Bogota (remoto)",
+                        city:"Bogota",
                         description:this.langTexts.jobs.jobs[3]["description"],
                         date:"2020-2021",
                         image:paths.jobs["tulpep"]
@@ -171,16 +171,16 @@ class Sections{
                     {
                         place:this.langTexts.jobs.jobs[4]["name"],
                         position:this.langTexts.jobs.jobs[4]["position"],
-                        city:"Bogota (remoto)",
+                        city:"Bogota",
                         description:this.langTexts.jobs.jobs[4]["description"],
                         date:"2021",
                         image:paths.jobs["symplifica"]
                     },
                     {
-                        place:this.langTexts.jobs.jobs[4]["name"],
-                        position:this.langTexts.jobs.jobs[4]["position"],
-                        city:"Miami, Florida (remoto)",
-                        description:this.langTexts.jobs.jobs[4]["description"],
+                        place:this.langTexts.jobs.jobs[5]["name"],
+                        position:this.langTexts.jobs.jobs[5]["position"],
+                        city:"Miami, Florida",
+                        description:this.langTexts.jobs.jobs[5]["description"],
                         date:"2022-2023",
                         image:paths.jobs["stradata"]
                     },

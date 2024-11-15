@@ -14,7 +14,7 @@
                                     |{{ section.place }}
                                 p(class="itemCity itemsCenter headerCard")
                                     |{{ section.city }}
-                                p(class="itemsCenter itemPosition")
+                                p(class="itemsCenter itemPosition headerCard")
                                     |{{ section.position }}
                                 div(class="itemsCenter itemDescription")
                                     p
