@@ -20,11 +20,11 @@ const texts = {
     skills:{
         title:"Habilidades",
         skillsTech:{
-            python:"Lenguaje de programación. Se utiliza ampliamente en el desarrollo web, análisis de datos, inteligencia artificial y computación científica",
-            php:"Lenguaje de Programación. Es especialmente adecuado para crear páginas web dinámicas",
-            ruby:"Lenguaje de Programacion. Se utiliza a menudo en el desarrollo web, especialmente con el framework Ruby on Rails",
-            csharp:"Lenguaje de Programacion, Se utiliza principalmente para desarrollar aplicaciones y juegos de Windows, especialmente con el framework .NET",
-            javascript:"Lenguaje de Programacion. Utilizado para crear páginas web interactivas. Es una parte esencial del desarrollo web junto con HTML y CSS",
+            python:"Desarrollo web, análisis de datos, inteligencia artificial y computación científica",
+            php:"Desarrollo web dinámico",
+            ruby:"Desarrollo web",
+            csharp:"Desarrollar aplicaciones y juegos",
+            javascript:"Desarrollo web interactivo. Es una parte esencial del desarrollo web junto con HTML y CSS",
             node:"Entorno de ejecución para JavaScript del lado del servidor. Se utiliza ampliamente para construir aplicaciones de red escalables",
             sql:"Lenguaje de consulta estructurada específico de dominio utilizado para gestionar y manipular bases de datos relacionales",
             mongo:"Base de datos NoSQL que utiliza un modelo de datos orientado a documentos. Ideal para la escalabilidad, flexibilidad, y manejo grandes cantidades de datos no estructurados",
