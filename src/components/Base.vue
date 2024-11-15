@@ -2,16 +2,18 @@
   main
     NavigationBar
     BackgroundComponent(v-bind:position='position', v-bind:section='section', v-bind:direction='direction')
-    SectionContainer
+    SectionContainer(v-bind:data='data',v-bind:languaje='languaje',v-bind:presentationTexts='presentationT',v-bind:skillsTexts='skillsT',v-bind:jobsTexts='jobsT',v-bind:examplesTexts='examplesT')
     FooterContainer
 </template>
 
 <script>
 import NavigationBar from './Navigation.vue'
 //import ThreeBack from './ThreeBack.vue'
+import { getPresentationSections,getExamplesSections,getJobsSections,getSkillsSections } from '../assets/js/templates/sectionsw.js';
 import BackgroundComponent from './Background.vue'
 import SectionContainer from './SectionContainer.vue'
 import FooterContainer from './FooterContainer.vue'
+//import textsEn from '@/assets/js/texts/en.js';
 export default {
   name: 'BaseApp',
   data() {
@@ -24,10 +26,22 @@ export default {
       changed:true,
       sections:["presentation", "skills", "jobs", "examples"],
       prevPosition:0,
-      actualPosition:0
+      actualPosition:0,
+      presentationT:getPresentationSections(),
+      skillsT:getSkillsSections(),
+      jobsT:getJobsSections(),
+      examplesT:getExamplesSections(),
+      languaje:"es",
+      data:require("./../assets/js/texts/es.js"),
     }
   },
+
   methods: {
+    changeLang(lang){
+      //const t = require(`@/assets/js/texts/${lang}`);
+      this.languaje = lang
+
+    },
     scrolling2(e){
       console.log(e)
     } ,
@@ -45,7 +59,6 @@ export default {
     },
     touchinMove(e){
       let direction = "up"
-      console.log("33",e.targetTouches[0].pageY)
       this.actualPosition = e.targetTouches[0].pageY
       if(this.actualPosition >= this.prevPosition){
         direction = "up"
@@ -56,14 +69,6 @@ export default {
       this.prevPosition = this.actualPosition
     } ,
     scrolling(direction){
-        // let whell = event.deltaY
-        // if(whell >= 0){
-        //     this.position = (this.position + 1 > 119) ? 0 : this.position + 1
-        //     this.direction = "down"
-        // }else{
-        //     this.position = (this.position - 1 < 0) ? 119 : this.position - 1
-        //     this.direction = "up"
-        // }
         if(direction == "down"){
           this.position = (this.position + 1 > 359) ? 0 : this.position + 1
           this.direction = "down"
@@ -135,9 +140,11 @@ export default {
         const elementJoinSection = document.getElementById("examples")
         elementJoinSection.style.visibility = "hidden"
     },
+    beforeMount() {
+      //this.chengeLang("en")
+    },
   components: {
     NavigationBar,
-    //ThreeBack,
     BackgroundComponent,
     SectionContainer,
     FooterContainer

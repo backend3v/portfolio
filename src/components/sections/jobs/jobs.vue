@@ -2,34 +2,40 @@
     #jobs(class="section")
         section
             .containerSections
-                h2(class="headerSection itemsCenter")
-                    |{{ title }}
                 .sectionSide
+                    h2(class="headerSection itemsCenter")
+                        |{{ title }}
                     .gridQuarterSections(class="gridSpaceS")
-                        div(class="card",v-for="section in jobsSections")
+                        div(class="card",v-for="section in jobs")
                             .gridJobs(class="")
                                 .itemImage(class="headerCard itemsCenter")
-                                    img(class="imageM" :src="getUrl(paths.default[section.image])")
+                                    img(class="imageM" :src="section.image")
                                 h2(class="itemsCenter itemPlace headerCard")
                                     |{{ section.place }}
-                                .itemCity(class="itemsCenter headerCard")
+                                p(class="itemCity itemsCenter headerCard")
                                     |{{ section.city }}
-                                h3(class="itemsCenter itemPosition")
+                                p(class="itemsCenter itemPosition")
                                     |{{ section.position }}
-                                .itemDescription(class="itemsCenter")
-                                    |{{ section.description }}
-                                .itemDate(class="itemsCenter headerCard")
+                                div(class="itemsCenter itemDescription")
+                                    p
+                                        |{{ section.description[0] }}
+                                    p
+                                        |{{ section.description[1]}}
+                                p(class="itemDate itemsCenter headerCard")
                                     |{{ section.date }}
                 .sectionSide
                     .gridHalfSections(class="gridSpaceS")
-                        div(v-for="section in projectSections")
+                        div(v-for="section in projects")
                             .gridProjects(class="card")
                                 .itemImage(class="headerCard itemsCenter")
-                                    img(class="imageL" :src="getUrl(paths.default[section.image])")
+                                    img(class="imageL" :src="section.image")
                                 h2(class="itemsCenter itemName headerCard")
                                     |{{ section.name }}
-                                .itemsCenter(class="itemDescription")
-                                    |{{ section.description }}
+                                div(class="itemsCenter itemDescription")
+                                    p
+                                        |{{ section.description[0] }}
+                                    p
+                                        |{{ section.description[1]}}
                 .footerSection
                     div
                         |+
@@ -41,14 +47,17 @@ export default {
   name: 'JobsContainer',
   data() {
     return {
-        title: this.data.title,
+        //title: this.data.title,
         jobsSections:this.data.content.jobs,
         projectSections:this.data.content.projects,
         paths:require("./../../../assets/js/config/paths/jobs.js")
     }
   },
   props: {
-    data:Object
+    data:Object,
+    title: String,
+    jobs: Array,
+    projects:Array
   },
   methods: {
     getUrl(path) {

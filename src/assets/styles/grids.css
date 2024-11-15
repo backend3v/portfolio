@@ -62,7 +62,7 @@
       'image city city date'
       'position position position position'
       'description description description description';
-    grid-template-rows: var(--hXS) var(--hXS) var(--hXS) var(--hXS);
+    grid-template-rows:var(--hHS) var(--hXXS) var(--hXXS) var(--hSM);
     grid-template-columns: var(--wS) auto auto auto;
   }
 .gridSectionsSkills{

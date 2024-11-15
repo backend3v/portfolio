@@ -14,6 +14,12 @@
           |{{this.$parent.section}} -
           |{{this.$parent.joinSection}} -
           |{{this.$parent.changed}}
+        div(@click="this.$parent.changeLang('en')" class="bottonA")
+            |EN
+        div
+          | - 
+        div(@click="this.$parent.changeLang('es')" class="bottonA")
+            |ES
 </template>
 
 <script>

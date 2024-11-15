@@ -6,236 +6,253 @@ import texts from './../texts/es.js';
 class Sections{
     langTexts=texts
     name=""
-    sections={
-        presentation:{
-        title:this.langTexts.presentation["title"],
-        content:{
-            position:this.langTexts.presentation["position"],
-            name:this.langTexts.presentation["name"],
-            about:this.langTexts.presentation["about"],
-            contact:[
+    getSkillsSections() {
+        return {
+            title:this.langTexts.skills["title"],
+            skillsTech:[
                 {
-                    name:this.langTexts.presentation["social"],
-                    texts:[
-                        [this.langTexts.presentation["email1"],""],
-                        [this.langTexts.presentation["email2"],""]
-                    ]
+                    name:"python",
+                    description:this.langTexts.skills.skillsTech["python"],
+                    image:paths.skills["python"]
                 },
                 {
-                    name:this.langTexts.presentation["github"],
-                    texts:[
-                        [this.langTexts.presentation["muluk"],paths["githubmuluk"]],
-                        [this.langTexts.presentation["backendev"],paths["githubback"]]
-                    ]
+                    name:"php",
+                    description:this.langTexts.skills.skillsTech["php"],
+                    image:paths.skills["php"]
                 },
                 {
-                    name:this.langTexts.presentation["colab"],
-                    texts:[
-                        [this.langTexts.presentation["colab1"],"https://colab.research.google.com/drive/1T-ym4onI8Ae9zz_XWkccCzo9LNM9xpQh?usp=sharing"],
-                        [this.langTexts.presentation["colab2"],"https://colab.research.google.com/drive/12cT7DJaHu13vvtjV8A57oObheXRLPank?usp=sharing"],
-                        [this.langTexts.presentation["colab3"],"https://colab.research.google.com/drive/1ls_qLQ3Xyb_yo1jDI7KsVOYjKJvnHOgz?usp=sharing"],
-                    ]
+                    name:"ruby",
+                    description:this.langTexts.skills.skillsTech["ruby"],
+                    image:paths.skills["ruby"]
+                },
+                {
+                    name:"c#",
+                    description:this.langTexts.skills.skillsTech["csharp"],
+                    image:paths.skills["csharp"]
+                },
+                {
+                    name:"javascript",
+                    description:this.langTexts.skills.skillsTech["javascript"],
+                    image:paths.skills["javascript"]
+                },
+                {
+                    name:"node",
+                    description:this.langTexts.skills.skillsTech["node"],
+                    image:paths.skills["nodejs"]
+                },
+                {
+                    name:"linux",
+                    description:this.langTexts.skills.skillsTech["linux"],
+                    image:paths.skills["linux"]
+                },
+                {
+                    name:"sql",
+                    description:this.langTexts.skills.skillsTech["sql"],
+                    image:paths.skills["mysql"]
+                },
+                {
+                    name:"docker",
+                    description:this.langTexts.skills.skillsTech["docker"],
+                    image:paths.skills["docker"]
+                },
+                {
+                    name:"git",
+                    description:this.langTexts.skills.skillsTech["git"],
+                    image:paths.skills["git"]
+                },
+                {
+                    name:"mongo",
+                    description:this.langTexts.skills.skillsTech["mongo"],
+                    image:paths.skills["mongodb"]
                 }
-                ,
+            ],
+            content:[
+                {
+                    name:this.langTexts.skills.content[0]["name"],
+                    texts:this.langTexts.skills.content[0]["texts"]
+                },
+                {
+                   name:this.langTexts.skills.content[1]["name"],
+                    texts:this.langTexts.skills.content[1]["texts"]
+                },
+                {
+                    name:this.langTexts.skills.content[2]["name"],
+                    texts:this.langTexts.skills.content[2]["texts"]
+                },
+                {
+                    name:this.langTexts.skills.content[3]["name"],
+                    texts:this.langTexts.skills.content[3]["texts"]
+                }
             ]
         }
-      },
-    skills:{
-        title:this.langTexts.skills["title"],
-        skillsTech:[
-            {
-                name:"python",
-                description:this.langTexts.skills.skillsTech["python"],
-                image:"python"
-            },
-            {
-                name:"php",
-                description:this.langTexts.skills.skillsTech["php"],
-                image:"php"
-            },
-            {
-                name:"ruby",
-                description:this.langTexts.skills.skillsTech["ruby"],
-                image:"ruby"
-            },
-            {
-                name:"c#",
-                description:this.langTexts.skills.skillsTech["csharp"],
-                image:"csharp"
-            },
-            {
-                name:"javascript",
-                description:this.langTexts.skills.skillsTech["javascript"],
-                image:"javascript"
-            },
-            {
-                name:"node",
-                description:this.langTexts.skills.skillsTech["node"],
-                image:"nodejs"
-            },
-            {
-                name:"linux",
-                description:this.langTexts.skills.skillsTech["linux"],
-                image:"linux"
-            },
-            {
-                name:"sql",
-                description:this.langTexts.skills.skillsTech["sql"],
-                image:"sql"
-            },
-            {
-                name:"docker",
-                description:this.langTexts.skills.skillsTech["docker"],
-                image:"docker"
-            },
-            {
-                name:"git",
-                description:this.langTexts.skills.skillsTech["git"],
-                image:"git"
-            },
-            {
-                name:"mongo",
-                description:this.langTexts.skills.skillsTech["mongo"],
-                image:"mongodb"
-            }
-        ],
-        content:[
-            {
-                name:"data",
-                texts:[
-                    "Extraccion, tratamiento y carga de Datos",
-                    "Analisis estadistico Predictivo y Descriptivo de Datos",
-                    "Manejo de Bases de Datos Relacionales y No Relacionales"
-                ]
-            },
-            {
-                name:"web",
-                texts:[
-                    "Desarrollo de Aplicaciones Web y Microservicios",
-                ]
-            },
-            {
-                name:"movil",
-                texts:[
-                    "Desarrollo de Aplicaciones Moviles"
-                ]
-            },
-            {
-                name:"desktop",
-                texts:[
-                    "Desarrollo de Aplicaciones Desktop entorno Linux",
-                    "Integracion y Automatizacion de procesos",
-                ]
-            }
-        ]
-    }
-    ,
-    jobs:{
-    title:"trabajos",
-    content:{
-        jobs:[
-            {
-                place:"Hospital San Ignacio",
-                position:"Tecnico de Soporte TI",
-                city:"Bogota",
-                description:"Desarrollo de Aplicaciones Web y Microservicios",
-                date:"2021-2022",
-                image:"husi"
-            },
-            {
-                place:"Risk Posibble",
-                position:"Data Enginer & Software Developer",
-                city:"Miami, Florida (remoto)",
-                description:"Desarrollo de Aplicaciones Web y Microservicios",
-                date:"2022-2023",
-                image:"none"
-
-            },
-            {
-                place:"Biznaga Media",
-                position:"Software Developer",
-                city:"Fort Lauderdale, Florida (remoto)",
-                description:"Desarrollo de Aplicaciones Web y Microservicios",
-                date:"2023-2024",
-                image:"biznaga"
-
-            },
-            {
-                place:"Tulpep",
-                position:"Software Developer",
-                city:"Bogota (remoto)",
-                description:"Desarrollo de Aplicaciones Web y Microservicios",
-                date:"2023-2024",
-                image:"tulpep"
-            },
-            {
-                place:"Symplifica",
-                position:"Web Developer",
-                city:"Bogota (remoto)",
-                description:"Desarrollo de Aplicaciones Web y Microservicios",
-                date:"2023-2024",
-                image:"symplifica"
-            },
-            {
-                place:"Stradata",
-                position:"Software Developer & Data Analitic",
-                city:"Medellin (remoto)",
-                description:"Desarrollo de Aplicaciones Web y Microservicios",
-                date:"2023-2024",
-                image:"stradata"
-            }
-        ],
-        projects:[
-            {
-                name:"Proyecto Decifrar Alfabeto",
-                description:"Decifrar palabras y verbos y preposiciones en un Alfabeto 'Diferente'",
-                url:"https://colab.research.google.com/drive/12cT7DJaHu13vvtjV8A57oObheXRLPank",
-                image:"alphabeth"
-            },
-            {
-                name:"Proyecto Dorean",
-                description:"Proyecto guia para Paqueteria de SO familia Debian",
-                url:"https://github.com/muluk-code/codes/tree/master/proyecto_Dorean",
-                image:"dorean"
-            },
-            {
-                name:"Proyecto Consulta BTC",
-                description:"Consulta de eth_btc y ltc_btc",
-                url:"https://colab.research.google.com/drive/1T-ym4onI8Ae9zz_XWkccCzo9LNM9xpQh",
-                image:"btc"
-            },
-            {
-                name:"Proyectos Estadistica",
-                description:"Proyectos con diferentes metodos estadisticos",
-                url:"https://colab.research.google.com/drive/1ls_qLQ3Xyb_yo1jDI7KsVOYjKJvnHOgz?usp=sharing",
-                image:"estadistica"
-            }
-        ]
-    },
-    },
-    examples:{
-    title:"ejemplos"
-    }
-            
     }
     
-    constructor(texts){
-        this.langTexts = texts
+    getPresentationSections() {
+        return {
+            title:this.langTexts.presentation["title"],
+            content:{
+                position:this.langTexts.presentation["position"],
+                name:this.langTexts.presentation["name"],
+                about:this.langTexts.presentation["about"],
+                contact:[
+                    {
+                        name:this.langTexts.presentation["contact"],
+                        texts:[
+                            [this.langTexts.presentation["email1"],""],
+                            [this.langTexts.presentation["email2"],""]
+                        ]
+                    },
+                    {
+                        name:this.langTexts.presentation["social"],
+                        texts:[
+                            [this.langTexts.presentation["linkedin"],paths.presentation["linkedin"]],
+                        ]
+                    },
+                    {
+                        name:this.langTexts.presentation["github"],
+                        texts:[
+                            [this.langTexts.presentation["muluk"],paths.presentation["githubmuluk"]],
+                            [this.langTexts.presentation["backendev"],paths.presentation["githubback"]]
+                        ]
+                    },
+                    {
+                        name:this.langTexts.presentation["colab"],
+                        texts:[
+                            [this.langTexts.presentation["colab1"],paths.presentation["colab1"]],
+                            [this.langTexts.presentation["colab2"],paths.presentation["colab2"]],
+                            [this.langTexts.presentation["colab3"],paths.presentation["colab3"]],
+                        ]
+                    }
+                    ,
+                ]
+            }
+          }
+    }
+
+    getJobsSections() {
+        return {
+            title:this.langTexts.jobs["title"],
+            content:{
+                jobs:[
+                    {
+                        place:this.langTexts.jobs.jobs[0]["name"],
+                        position:this.langTexts.jobs.jobs[0]["position"],
+                        city:"Bogota",
+                        description:this.langTexts.jobs.jobs[0]["description"],
+                        date:"2016-2018",
+                        image:paths.jobs["husi"]
+                    },
+                    {
+                        place:this.langTexts.jobs.jobs[1]["name"],
+                        position:this.langTexts.jobs.jobs[1]["position"],
+                        city:"Miami, Florida (remoto)",
+                        description:this.langTexts.jobs.jobs[1]["description"],
+                        date:"2018-2019",
+                        image:paths["none"]
+        
+                    },
+                    {
+                        place:this.langTexts.jobs.jobs[2]["name"],
+                        position:this.langTexts.jobs.jobs[2]["position"],
+                        city:"Fort Lauderdale, Florida (remoto)",
+                        description:this.langTexts.jobs.jobs[2]["description"],
+                        date:"2020",
+                        image:paths.jobs["biznaga"]
+        
+                    },
+                    {
+                        place:this.langTexts.jobs.jobs[3]["name"],
+                        position:this.langTexts.jobs.jobs[3]["position"],
+                        city:"Bogota (remoto)",
+                        description:this.langTexts.jobs.jobs[3]["description"],
+                        date:"2020-2021",
+                        image:paths.jobs["tulpep"]
+                    },
+                    {
+                        place:this.langTexts.jobs.jobs[4]["name"],
+                        position:this.langTexts.jobs.jobs[4]["position"],
+                        city:"Bogota (remoto)",
+                        description:this.langTexts.jobs.jobs[4]["description"],
+                        date:"2021",
+                        image:paths.jobs["symplifica"]
+                    },
+                    {
+                        place:this.langTexts.jobs.jobs[4]["name"],
+                        position:this.langTexts.jobs.jobs[4]["position"],
+                        city:"Miami, Florida (remoto)",
+                        description:this.langTexts.jobs.jobs[4]["description"],
+                        date:"2022-2023",
+                        image:paths.jobs["stradata"]
+                    },
+                ],
+                projects:[
+                    {
+                        name:this.langTexts.jobs.projects[0]["name"],
+                        description:this.langTexts.jobs.projects[0]["description"],
+                        url:paths.jobs["alphabeth"][1],
+                        image:paths.jobs["alphabeth"][0]
+                    },
+                    {
+                        name:this.langTexts.jobs.projects[1]["name"],
+                        description:this.langTexts.jobs.projects[1]["description"],
+                        url:paths.jobs["dorean"][1],
+                        image:paths.jobs.dorean[0]
+                    },
+                    {
+                        name:this.langTexts.jobs.projects[2]["name"],
+                        description:this.langTexts.jobs.projects[2]["description"],
+                        url:paths.jobs["btc"][1],
+                        image:paths.jobs["btc"][0]
+                    },
+                    {
+                        name:this.langTexts.jobs.projects[3]["name"],
+                        description:this.langTexts.jobs.projects[3]["description"],
+                        url:paths.jobs["estadistica"][1],
+                        image:paths.jobs["estadistica"][0]
+                    },
+                    {
+                        name:this.langTexts.jobs.projects[3]["name"],
+                        description:this.langTexts.jobs.projects[3]["description"],
+                        url:paths.jobs["estadistica"][1],
+                        image:paths.jobs["estadistica"][0]
+                    }
+                ]
+            },
+            }
+    }
+    getExamplesSections() {
+        return {
+            title:"Ejemplos",
+        }
     }
 }
-export function getPresentationSections(texts) {
-    const sections = new Sections(texts);
-    return sections.sections.presentation;
+
+export function getPresentationSections(t) {
+    let sections = new Sections();
+    if(t != undefined){
+        sections.langTexts=t
+    }
+    let s =sections.getPresentationSections()
+    return s;
 }
-export function getSkillsSections(texts) {
-    const sections = new Sections(texts);
-    return sections.sections.skills;
+export function getSkillsSections(t) {
+    const sections = new Sections();
+    if(t != undefined){
+        sections.langTexts=t
+    }
+    return sections.getSkillsSections();
 }
-export function getJobsSections(texts) {
-    const sections = new Sections(texts);
-    return sections.sections.jobs;
+export function getJobsSections(t) {
+    const sections = new Sections();
+    if(t != undefined){
+        sections.langTexts=t
+    }
+    return sections.getJobsSections();
 }
-export function getExamplesSections(texts) {
-    const sections = new Sections(texts);
-    return sections.sections.examples;
+export function getExamplesSections(t) {
+    const sections = new Sections();
+    if(t != undefined){
+        sections.langTexts=t
+    }
+    return sections.getExamplesSections();
 }

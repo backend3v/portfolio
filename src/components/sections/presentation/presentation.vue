@@ -14,7 +14,7 @@
                 | {{ about }}
           .sectionSide
             div(class="gridHalfSections gridSpaceS")
-              div(class="itemsCenter card" v-for="contacth in data.content.contact")
+              div(class="itemsCenter card" v-for="contacth in contact")
                   h2(class="headerCard itemsCenter sectionS")
                     |{{ contacth.name }}
                   br
@@ -30,27 +30,41 @@
 </template>
 
 <script>
+//import { getPresentationSections } from '@/assets/js/templates/sectionsw.js';
 export default {
   name: 'PresentationContainer',
   data() {
     return {
-        title: this.data.title,
-        about: this.data.content.about,
-        name: this.data.content.name,
-        position: this.data.content.position,
-        contactSections:Object.keys(this.data.content.contact)
+
+        //title: this.data.title,
+        // about: this.data.content.about,
+        // name: this.data.content.name,
+        // position: this.data.content.position,
+        // contactSections:Object.keys(this.data.content.contact)
     }
   },
   methods: {
       goTo(url){
         this.$parent.goToUrl(url)
-      }
+      },
+      // qs(lang){
+      //   const t = require(`@/assets/js/texts/${lang}`);
+      //   let d =getPresentationSections(t.default)
+      //   this.title = d.title
+      // }
+
     },
     props: {
     data:Object,
+    title: String,
+    about: String,
+    name: String,
+    position: String,
+    contact:Array
   },
     mounted() {
-      console.log("444",this.data)
+    
+      
     },
   components: {
 

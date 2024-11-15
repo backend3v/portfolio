@@ -7,7 +7,7 @@
             |{{ title }}
         .sectionSide
           div(class="gridHalfSections gridSpaceS")
-            div(class="card gridSectionsSkills" v-for="section in data.content")
+            div(class="card gridSectionsSkills" v-for="section in content")
               div(class="itemsCenter itemImage headerCard")
               h2(class="itemsCenter itemSection headerCard")
                 |{{ section.name }}
@@ -16,7 +16,7 @@
                   |{{ text }}
         .sectionSide
           div(class="gridSixSections gridSpaceS")
-            SkillsGrid(:skill="skill" v-for="skill in skills" :key="skill" :path="paths.default[skill.image]")
+            SkillsGrid(:skill="skill" v-for="skill in skills" :key="skill" )
         .footerSection
           div
             |+ 
@@ -28,14 +28,17 @@ export default {
   name: 'SkillsContainer',
   data() {
     return {
-      skills:this.data.skillsTech,
-      title: this.data.title,
+      //skills:this.data.skillsTech,
+      //title: this.data.title,
       skillsSections:Object.keys(this.data.content),
       paths:require("./../../../assets/js/config/paths/skills.js")
     }
   },
   props: {
-    data:Object
+    data:Object,
+    title: String,
+    content: Array,
+    skills: Array
   },
   methods: {
 

@@ -1,10 +1,10 @@
 <template lang="pug">
     div(class="card gridSkills")
       div(class="itemImage headerCard itemsCenter")
-        img(:src="getUrl(path)" class="imageM")
+        img(:src="skill.image" class="imageM")
       h2(class="itemsCenter itemName headerCard")
           |{{skill.name}}
-      div(class="itemsCenter itemDescription")
+      p(class="itemsCenter itemDescription")
           |{{skill.description}} 
 </template>
 

@@ -10,9 +10,9 @@
     --colorAccent:rgb(245, 245, 245);
     --colorNeutral:rgb(225, 225, 225);
     --wFull: 100vw;
-    --wFull2: 96.4vw;
+    --wFull2: 98.2vw;
     --hFullContainer: 90vh;
-    --hFullContainer2: 88vh;
+    --hFullContainer2: 90vh;
     --hHalfContainer:42.5vh;
     --hRadius:45vh;
     --hFullSection: 82vh;
@@ -26,12 +26,12 @@
     --textL2: 1.5vw;
     --textXL2: 2vw;
     --textXXL2: 3vw;
-    --wSix:15.8vw;
-    --wSix2:30.9vw;
+    --wSix:15.6vw;
+    --wSix2:32vw;
     --wQuarter:23.8vw;
-    --wQuarter2:47.6vw;
+    --wQuarter2:48.6vw;
     --wHalf:48vw;
-    --wHalf2:47.5vw;
+    --wHalf2:48.5vw;
     --hXXXS:0.5vh;
     --hXXS:1vh;
     --hXS:3vh;
@@ -45,7 +45,7 @@
     --hIXM:7vh;
     --wIXM:7vw;
     --wXXXS:0.5vw;
-    --wXXS:1vh;
+    --wXXS:1vw;
     --wXS:3vw;
     --wHS:2.5vw;
     --wS:5vw;
@@ -112,6 +112,14 @@ nav{
     width: var(--wFull);;
     background-color: var(--colorMain);
     display:flex;
+}
+.bottonA{
+    height: var(--hS);
+    display: grid;
+    align-content: center;
+    width: var(--wS);
+    text-align: center;
+    background-color: var(--colorMainW);
 }
 
 #TContainer{
