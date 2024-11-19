@@ -109,11 +109,11 @@ small {
 }
 
 .footerContainer {
-    height: var(--hXS);
+    height: var(--hMS);
     width: var(--wFull);
     background-color: var(--colorMain);
     position: absolute;
-    bottom: calc(var(--hXXS) * 2);
+    bottom: calc(var(--hXXS) * 3.5);
 }
 
 nav {

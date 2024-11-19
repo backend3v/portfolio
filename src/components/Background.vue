@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       width:  window.innerWidth,
-      height: window.innerHeight,
+      height: window.innerHeight * 0.99,
       render,
     };
   },
