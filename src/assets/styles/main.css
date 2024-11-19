@@ -109,17 +109,17 @@ small {
 }
 
 .footerContainer {
-    height: var(--hXXS);
+    height: var(--hMS);
     width: var(--wFull);
     background-color: var(--colorMain);
     position: absolute;
-    bottom: calc(var(--hXXS) * 3.5);
+    bottom: calc(var(--hXXS) * 5);
 }
 
 nav {
     position: absolute;
     top: 0px;
-    height: var(--hS);
+    height: var(--hXS);
     width: var(--wFull);
     ;
     background-color: var(--colorMain);
@@ -137,13 +137,13 @@ nav {
 
 #TContainer {
     position: absolute;
-    top: var(--hS);
+    top: var(--hXS);
     z-index: 0;
 }
 
 #container {
     position: absolute;
-    top: var(--hS);
+    top: var(--hXS);
     width: var(--wFull);
     height: var(--hFullContainer);
     z-index: 99;
