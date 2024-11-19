@@ -8,7 +8,11 @@ class Sections{
     name=""
     getSkillsSections() {
         return {
-            title:this.langTexts.skills["title"],
+            titles:{
+                title:this.langTexts.skills["title"],
+                skills:this.langTexts.skills["skills"],
+                skillsTech:this.langTexts.skills["skillsTechs"],
+            },
             skillsTech:[
                 {
                     name:"python",
@@ -82,6 +86,14 @@ class Sections{
                 {
                     name:this.langTexts.skills.content[3]["name"],
                     texts:this.langTexts.skills.content[3]["texts"]
+                },
+                {
+                    name:this.langTexts.skills.content[2]["name"],
+                    texts:this.langTexts.skills.content[2]["texts"]
+                },
+                {
+                    name:this.langTexts.skills.content[3]["name"],
+                    texts:this.langTexts.skills.content[3]["texts"]
                 }
             ]
         }
@@ -131,7 +143,11 @@ class Sections{
 
     getJobsSections() {
         return {
-            title:this.langTexts.jobs["title"],
+            titles:{
+                title:this.langTexts.jobs["title"],
+                jobs:this.langTexts.jobs["jobsT"],
+                projects:this.langTexts.jobs["projectsT"],
+            },
             content:{
                 jobs:[
                     {

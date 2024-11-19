@@ -1,167 +1,203 @@
+.gridHalfSections {
+  display: grid;
+  grid-template-columns: var(--wHalf);
+}
+.gridQuarterSections {
+  display: grid;
+  grid-template-columns: var(--wQuarter) var(--wQuarter);
+}
+.gridSixSections {
+  display: grid;
+  grid-template-columns: var(--wSix) var(--wSix) var(--wSix);
+}
+.gridSpaceS {
+  grid-column-gap: var(--wXXXS);
+  grid-row-gap: var(--hXXXS);
+}
 
+.gridSpaceM {
+  grid-column-gap: var(--wXS);
+  grid-row-gap: var(--hXS);
+}
+.gridSpaceL {
+  grid-column-gap: var(--wXS);
+  grid-row-gap: var(--hXS);
+}
 
-.gridHalfSections{
+.itemImage {
+  grid-area: image;
+}
+.itemPlace {
+  grid-area: place;
+}
+.itemPosition {
+  grid-area: position;
+}
+.itemCity {
+  grid-area: city;
+}
+.itemDate {
+  grid-area: date;
+}
+.itemDescription {
+  grid-area: description;
+}
+.itemSection {
+  grid-area: section;
+}
+.itemBar {
+  grid-area: bar;
+}
+.itemName {
+  grid-area: name;
+}
+.itemMenu {
+  grid-area: imenu;
+}
+.itemTitle {
+  grid-area: title;
+  background-color: var(--colorHeaderW);
+}
+.itemButtonA {
+  grid-area: buttona;
+}
+.itemButtonB {
+  grid-area: buttonb;
+}
+.itemSectionA {
+  grid-area: sectiona;
+  background-color: var(--colorHeaderW);
+}
+.itemSectionB {
+  grid-area: sectionb;
+  background-color: var(--colorHeaderW);
+}
+
+.gridCarrousel {
+  display: grid;
+  grid-template:
+    "title title title title"
+    "section section section section"
+    "sectiona buttona buttonb sectionb";
+  grid-template-rows: var(--hMS) auto var(--hMS);
+  grid-template-columns: auto var(--wS) var(--wS) auto;
+  border: 0.3vw var(--colorHeaderW) solid;
+}
+
+.gridJobs {
+  display: grid;
+  grid-template:
+    "image place place date"
+    "image position position city"
+    "description description description description";
+  grid-template-rows: var(--hHS) var(--hXXS) var(--hM);
+  grid-template-columns: var(--wS) auto auto auto;
+}
+.gridSectionsSkills {
+  display: grid;
+  grid-template:
+    "image section section section"
+    "description description description description";
+  grid-template-rows: var(--hXS) var(--hXL);
+  grid-template-columns: var(--wXS) auto auto auto;
+}
+
+.gridSkills {
+  display: grid;
+  grid-template:
+    "image name name"
+    "image description description";
+  grid-template-rows: var(--hXS) var(--hM);
+  grid-template-columns: var(--wSM) auto auto;
+}
+
+.gridProjects {
+  display: grid;
+  grid-template:
+    "image name name name"
+    "image description description description";
+  grid-template-rows: var(--hXS) var(--hL);
+  grid-template-columns: var(--wM) auto auto auto;
+}
+
+.gridExamples {
+  display: grid;
+  grid-template:
+    "imenu bar bar sectiona"
+    "imenu section section section";
+  grid-template-rows: var(--hS) var(--hFullContainer3);
+  grid-template-columns: var(--wL) auto auto var(--wM);
+}
+
+.gridSimplePrompt {
+    height: var(--hFullContainer3);
+  display: grid;
+  grid-template:
+    "title title title title"
+    "image description description description"
+    "sectiona sectiona sectionb sectionb";
+  grid-template-rows: var(--hS) var(--hL) auto;
+  grid-template-columns: var(--wL) auto auto auto;
+}
+@media (orientation: portrait) {
+  .gridHalfSections {
+    grid-template-columns: var(--wHalf2) var(--wHalf2);
+  }
+  .gridSixSections {
     display: grid;
+    grid-template-columns: var(--wSix2) var(--wSix2) var(--wSix2);
+  }
+  .gridSkills {
+    grid-template-rows: var(--hXS) var(--hS);
+    grid-template-columns: var(--wSM) auto auto;
+  }
+  .gridQuarterSections {
+    display: grid;
+    grid-template-columns: var(--wQuarter2) var(--wQuarter2);
+  }
+  .gridSpaceS {
+    grid-column-gap: var(--wXXS);
+    grid-row-gap: var(--hXXS);
+  }
+  .gridSpaceM {
+    grid-column-gap: var(--wXS);
+    grid-row-gap: var(--hXS);
+  }
+  .gridSpaceL {
+    grid-column-gap: var(--wS);
+    grid-row-gap: var(--hS);
+  }
+}
+@media (orientation: landscape) {
+  .gridHalfSections {
     grid-template-columns: var(--wHalf);
-}
-.gridQuarterSections{
-    display: grid;
-    grid-template-columns: var(--wQuarter) var(--wQuarter);
-    
-}
-.gridSixSections{
+  }
+  .gridSixSections {
     display: grid;
     grid-template-columns: var(--wSix) var(--wSix) var(--wSix);
-    
-}
-.gridSpaceS{
-    grid-column-gap: var(--wXXXS);
-    grid-row-gap: var(--hXXXS);
-}
-
-.gridSpaceM{
-    grid-column-gap: var(--wXS);
-    grid-row-gap: var(--hXS);
-}
-.gridSpaceL{
-    grid-column-gap: var(--wXS);
-    grid-row-gap: var(--hXS);
-}
-
-.itemImage{
-    grid-area: image;
-}
-.itemPlace{
-    grid-area: place;
-}
-.itemPosition{
-    grid-area: position;
-}
-.itemCity{
-    grid-area: city;
-}
-.itemDate{
-    grid-area: date;
-}
-.itemDescription{
-    grid-area: description;
-}
-.itemSection{
-    grid-area: section;
-}
-.itemBar{
-    grid-area: bar;
-}
-.itemName{
-    grid-area: name;
-}
-.gridJobs{
-    display: grid;
-    grid-template:
-      'image place place date'
-      'image position position city'
-      'description description description description';
-    grid-template-rows:var(--hHS) var(--hXXS) var(--hM);
-    grid-template-columns: var(--wS) auto auto auto;
   }
-.gridSectionsSkills{
-    display: grid;
-    grid-template:
-      'image section section section'
-      'description description description description';
-    grid-template-rows: var(--hXS) var(--hXL);
-    grid-template-columns: var(--wXS) auto auto auto;
-  }
-
-.gridSkills{
-    display: grid;
-    grid-template:
-      'image name name'
-      'image description description';
+  .gridSkills {
     grid-template-rows: var(--hXS) var(--hM);
     grid-template-columns: var(--wSM) auto auto;
   }
-
-
-.gridProjects{
-    display: grid;
-    grid-template:
-      'image name name name'
-      'image description description description';
-    grid-template-rows: var(--hXS) var(--hL);
-    grid-template-columns: var(--wM) auto auto auto;
+  .gridJobs {
+    grid-template-rows: var(--hXS) var(--hXS) var(--hXS) var(--hXS);
+    grid-template-columns: var(--wS) auto auto auto;
   }
-
-
-
-.gridExamples{
+  .gridQuarterSections {
     display: grid;
-    grid-template:
-    'menu bar bar bar'
-    'menu section section section';
-      
-    grid-template-rows: var(--hS) auto;
-    grid-template-columns: var(--wL) auto auto auto;
+    grid-template-columns: var(--wQuarter) var(--wQuarter);
   }
-  @media(orientation:portrait){
-    .gridHalfSections{
-        grid-template-columns: var(--wHalf2) var(--wHalf2);
-    }
-    .gridSixSections{
-        display: grid;
-        grid-template-columns: var(--wSix2) var(--wSix2) var(--wSix2);
-    }
-    .gridSkills{
-        grid-template-rows: var(--hXS) var(--hS);
-        grid-template-columns: var(--wSM) auto auto;
-    }
-    .gridQuarterSections{
-        display: grid;
-        grid-template-columns: var(--wQuarter2) var(--wQuarter2);
-    }
-    .gridSpaceS{
-        grid-column-gap: var(--wXXS);
-        grid-row-gap: var(--hXXS);
-    }
-    .gridSpaceM{
-        grid-column-gap: var(--wXS);
-        grid-row-gap: var(--hXS);
-    }
-    .gridSpaceL{
-        grid-column-gap: var(--wS);
-        grid-row-gap: var(--hS);
-    }
-}
-@media(orientation:landscape){
-    .gridHalfSections{
-        grid-template-columns:  var(--wHalf) ;
-    }
-    .gridSixSections{
-        display: grid;
-        grid-template-columns: var(--wSix) var(--wSix) var(--wSix);
-    }
-    .gridSkills{
-        grid-template-rows: var(--hXS) var(--hM);
-        grid-template-columns: var(--wSM) auto auto;
-    }
-    .gridJobs{
-        grid-template-rows: var(--hXS) var(--hXS) var(--hXS) var(--hXS);
-        grid-template-columns: var(--wS) auto auto auto;
-    }
-    .gridQuarterSections{
-        display: grid;
-        grid-template-columns: var(--wQuarter) var(--wQuarter);
-    }
-    .gridSpaceS{
-        grid-column-gap: var(--wXXXS);
-        grid-row-gap: var(--hXXXS);
-    }
-    .gridSpaceM{
-        grid-column-gap: var(--wXXXS);
-        grid-row-gap: var(--hXXXS);
-    }
-    .gridSpaceL{
-        grid-column-gap: var(--wXS);
-        grid-row-gap: var(--hXS);
-    }
+  .gridSpaceS {
+    grid-column-gap: var(--wXXXS);
+    grid-row-gap: var(--hXXXS);
+  }
+  .gridSpaceM {
+    grid-column-gap: var(--wXXXS);
+    grid-row-gap: var(--hXXXS);
+  }
+  .gridSpaceL {
+    grid-column-gap: var(--wXS);
+    grid-row-gap: var(--hXS);
+  }
 }

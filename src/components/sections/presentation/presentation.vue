@@ -2,9 +2,9 @@
   #presentation(class="section")
     section
       .containerSections
-          h2(class="headerSection itemsCenter")
-              |{{ title }}
           .sectionSide
+            h2(class="headerSection itemsCenter")
+              |{{ title }}
             div(class=" gridSpaceS")
               h1(class="itemsCenter sectionL")
                 | {{ name }}
@@ -24,9 +24,9 @@
                       h3(v-else)
                         |{{ contact[0] }}
                   br
-          .footerSection
-            div
-              |+
+            .footerSection
+              div
+                |+
 </template>
 
 <script>
@@ -55,7 +55,6 @@ export default {
 
     },
     props: {
-    data:Object,
     title: String,
     about: String,
     name: String,

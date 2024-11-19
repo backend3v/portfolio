@@ -9,36 +9,23 @@
 </template>
 
 <script>
-
-
 export default {
-  name: 'SkillsGrid',
+  name: "SkillsGrid",
   props: {
-    skill: String,
-    path: String
+    skill: Object,
+    path: String,
   },
   data() {
-    return {
-      
-
-    }
+    return {};
   },
-  
+
   methods: {
-    getUrl(path){
-      return "./images/skills/"+path
-    }
 
-    },
-    mounted() {
-        
-    },
-  components: {
-
-  }
-}
+  },
+  mounted() {},
+  components: {},
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+<style scoped></style>

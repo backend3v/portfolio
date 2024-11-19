@@ -1,20 +1,23 @@
-:root{
-    --colorMain: rgb(46,53,59);
-    --colorMainW: rgb(56,63,69);
-    --colorTransparent: rgba(0,0,0,1);
-    --colorBackCard: rgba(46,53,59,0.3);
-    --colorSkills:rgb(153, 255, 153);
-    --colorJobs:rgb(153, 153, 255);
-    --colorExamples:rgb(255, 153, 102);
-    --colorPresentation:rgb(102, 255, 255);
-    --colorAccent:rgb(245, 245, 245);
-    --colorNeutral:rgb(225, 225, 225);
+:root {
+    --colorMain: rgb(46, 53, 59);
+    --colorMainW: rgb(56, 63, 69);
+    --colorHeaderW: rgba(56, 63, 69,0.5);
+    --colorHeader: rgba(46, 53, 59,0.2);
+    --colorTransparent: rgba(0, 0, 0, 1);
+    --colorBackCard: rgba(46, 53, 59, 0.1);
+    --colorSkills: rgb(153, 255, 153);
+    --colorJobs: rgb(153, 153, 255);
+    --colorExamples: rgb(255, 153, 102);
+    --colorPresentation: rgb(102, 255, 255);
+    --colorAccent: rgb(245, 245, 245);
+    --colorNeutral: rgb(225, 225, 225);
     --wFull: 100vw;
     --wFull2: 98.2vw;
     --hFullContainer: 90vh;
     --hFullContainer2: 90vh;
-    --hHalfContainer:42.5vh;
-    --hRadius:45vh;
+    --hFullContainer3: 75vh;
+    --hHalfContainer: 42.5vh;
+    --hRadius: 45vh;
     --hFullSection: 82vh;
     --textS: 0.5vh;
     --textM: 1.55vh;
@@ -26,95 +29,104 @@
     --textL2: 1.5vw;
     --textXL2: 2vw;
     --textXXL2: 3vw;
-    --wSix:15.6vw;
-    --wSix2:32vw;
-    --wQuarter:23.8vw;
-    --wQuarter2:48.6vw;
-    --wHalf:48vw;
-    --wHalf2:48.5vw;
-    --hXXXS:0.5vh;
-    --hXXS:1vh;
-    --hXS:3vh;
-    --hHS:2.5vw;
-    --hS:5vh;
-    --hSM:7vh;
-    --hM:9vh;
-    --hL:10vh;
-    --hXL:16vh;
-    --hIM:6vh;
-    --wIM:6vw;
-    --hIXM:7vh;
-    --wIXM:7vw;
-    --wXXXS:0.5vw;
-    --wXXS:1vw;
-    --wXS:3vw;
-    --wHS:2.5vw;
-    --wS:5vw;
-    --wSM:7vw;
-    --wM:9vw;
-    --wL:16vw;
-    --hHalf:50vh;
-    --hHalf2:28vh;
-    --hHalf3:11.5vh
-    --font1:'Sarpanch',
-    --font2: 'Orbitron',
-    --font3: 'Wire One',
+    --wSix: 15.6vw;
+    --wSix2: 32vw;
+    --wQuarter: 23.8vw;
+    --wQuarter2: 48.6vw;
+    --wHalf: 48vw;
+    --wHalf2: 48.5vw;
+    --hXXXS: 0.5vh;
+    --hXXS: 1vh;
+    --hXS: 3vh;
+    --hHS: 2.5vw;
+    --hS: 5vh;
+    --hSM: 7vh;
+    --hM: 9vh;
+    --hL: 10vh;
+    --hXL: 16vh;
+    --hIM: 6vh;
+    --wIM: 6vw;
+    --hIXM: 7vh;
+    --wIXM: 7vw;
+    --wXXXS: 0.5vw;
+    --wXXS: 1vw;
+    --wXS: 3vw;
+    --wHS: 2.5vw;
+    --wS: 5vw;
+    --wSM: 7vw;
+    --wM: 9vw;
+    --wL: 16vw;
+    --hHalf: 50vh;
+    --hHalf2: 28vh;
+    --hHalf3: 11.5vh --font1:'Sarpanch',
+        --font2: 'Orbitron',
+        --font3: 'Wire One',
 }
 
-body{
+body {
     padding: 0%;
-    margin: 0% ;
+    margin: 0%;
     background-color: var(--colorMain);
     font-size: var(--textM);
     font-family: var(--font1);
-    color:var(--colorNeutral);
+    color: var(--colorNeutral);
     overscroll-behavior: none;
 }
-h1{
+
+h1 {
     padding: 0%;
-    margin: 0% ;
+    margin: 0%;
     font-size: var(--textXXL);
-    color:var(--colorAccent)
+    color: var(--colorAccent)
 }
-h2{
+
+h2 {
     padding: 0%;
-    margin: 0% ;
+    margin: 0%;
     font-size: var(--textXL);
 }
-h3{
+
+h3 {
     padding: 0%;
-    margin: 0% ;
+    margin: 0%;
     font-size: var(--textL);
 }
-p{
+
+p {
     padding: 0%;
-    margin: 0% ;
+    margin: 0%;
     font-size: var(--textM);
 }
-small{
+
+small {
     font-size: var(--textS)
 }
-.itemsCenter{
+
+.itemsCenter {
     align-items: center;
     text-align: center;
-    display: grid ;
+    display: grid;
 }
-.footerContainer{
+
+.footerContainer {
     height: var(--hXS);
     width: var(--wFull);
     background-color: var(--colorMain);
     position: absolute;
-    bottom: 0px;
+    bottom: calc(var(--hXXS) * 2);
 }
-nav{
+
+nav {
     position: absolute;
     top: 0px;
     height: var(--hS);
-    width: var(--wFull);;
+    width: var(--wFull);
+    ;
     background-color: var(--colorMain);
-    display:flex;
+    display: flex;
 }
-.bottonA{
+
+.bottonA {
     height: var(--hS);
     display: grid;
     align-content: center;
@@ -123,12 +135,13 @@ nav{
     background-color: var(--colorMainW);
 }
 
-#TContainer{
+#TContainer {
     position: absolute;
     top: var(--hS);
     z-index: 0;
 }
-#container{
+
+#container {
     position: absolute;
     top: var(--hS);
     width: var(--wFull);
@@ -139,7 +152,7 @@ nav{
     overflow: hidden;
 }
 
-#containerSection{
+#containerSection {
     position: absolute;
     width: var(--wFull);
     height: var(--hFullContainer);
@@ -150,192 +163,284 @@ nav{
     margin: 0px;
 }
 
-.section{
+.section {
     position: absolute;
     width: var(--wFull);
-    height: var(--hFullContainer);;
+    height: var(--hFullContainer);
+    ;
     padding: 0;
     margin: 0;
     border: 0;
 }
-.sectionS{
+
+.sectionS {
     height: var(--hXS);
 }
-.sectionL{
+
+.sectionL {
     height: var(--hHalf);
 }
-.sectionM{
+
+.sectionM {
     height: var(--hHalf2);
 }
-.card{
+
+.card {
     background-color: var(--colorBackCard);
 }
-.headerCard{
-    background-color: var(--colorMainW);
+
+.headerCard {
+    background-color: var(--colorHeader);
 }
-#presentation{ 
+
+#presentation {
     transform: translateZ(var(--hRadius));
     /* background-color: rgba(0,0,255,1); */
 
 }
-#presentation h2{
-    color:var(--colorPresentation)
+
+#presentation h2 {
+    color: var(--colorPresentation)
 }
-#jobs{ 
-    transform: rotateY(180deg) rotateZ(180deg) translateZ(var(--hRadius)); 
+
+#jobs {
+    transform: rotateY(180deg) rotateZ(180deg) translateZ(var(--hRadius));
     /* background-color: rgba(0,255,0,1); */
 }
-#jobs h2{
-    color:var(--colorJobs)
+
+#jobs h2 {
+    color: var(--colorJobs)
 }
-#examples{ 
+
+#examples {
     transform: rotateX(90deg) translateZ(var(--hRadius));
     /* background-color: rgba(255,522,0,1); */
 
 }
-#examples h2{
-    color:var(--colorExamples)
+
+#examples h2 {
+    color: var(--colorExamples)
 }
-#skills{ 
-    transform: rotateX(-90deg) translateZ(var(--hRadius)); 
+
+#skills {
+    transform: rotateX(-90deg) translateZ(var(--hRadius));
     /* background-color: rgba(255,0,0,1); */
 }
-#skills h2{
-    color:var(--colorSkills)
+
+#skills h2 {
+    color: var(--colorSkills)
 }
 
 
 
 
-.containerSections{
+.containerSections {
     align-items: center;
     width: var(--wFull);
     height: var(--hFullContainer);
 }
 
-.sectionSide{
-    display:grid;
+.sectionSide {
+    display: grid;
     align-items: center;
     text-align: center;
     padding: var(--hXXS) var(--wXXS);
 }
-.sectionSingle{
+
+.sectionSingle {
     /* border: 1px var(--colorComplementario) solid; */
     height: var(--hFullSection);
     width: var(--wFull);
     padding: var(--hXXS) var(--wXXS);
 }
-.footerSection{
-    position:absolute;
+
+.footerSection {
+    position: absolute;
     bottom: 0px;
     height: var(--hHS);
     width: var(--wFull);
     text-align: center;
-    background-color: var(--colorMain);
-}
-.headerSection{
-    position:absolute;
-    height: var(--hHS);
-    top: 0vh;
-    width: var(--wFull);
-    text-align: center;
-    background-color: var(--colorMain);
-    margin: 0%;
-}
-.imageM{
-    width:var(--hS);
-    height:var(--hS);
-}
-.imageL{
-    width:var(--hSM);
-    height:var(--hSM);
+    background-color: var(--colorHeaderW);
+    left: 0px;
 }
 
-@media(orientation:portrait){
-    .containerSections{
+.headerSection {
+    position: absolute;
+    height: var(--hHS);
+    top: 0vh;
+    left: 0vw;
+    width: var(--wFull);
+    text-align: center;
+    background-color: var(--colorHeaderW);
+    margin: 0%;
+}
+.headerSectionSimple {
+    background-color: var(--colorHeaderW);
+}
+
+.imageM {
+    width: var(--hS);
+    height: var(--hS);
+}
+
+.imageL {
+    width: var(--hSM);
+    height: var(--hSM);
+}
+
+
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width:200%
+}
+.carrouselFrame{
+    overflow: hidden;
+    width:100%
+}
+
+.carouselContainer {
+    /* Prevent overflow of items */
+    width: 100%;
+    /* Adjust as needed */
+    position: relative;
+}
+
+
+.carouselItem {
+    min-width: 50%;
+    /* Each item takes 50% of the container width */
+}
+
+.carouselButton {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+@media(orientation:portrait) {
+    .containerSections {
         display: block;
     }
-    .sectionSingle{
+
+    .sectionSingle {
         width: var(--wFull2);
     }
-    .sectionSide{
+
+    .sectionSide {
         height: var(--hHalfContainer);
         width: var(--wFull2);
     }
-    .sectionL{
+
+    .sectionL {
         height: var(--hHalf2);
     }
-    .sectionM{
+
+    .sectionM {
         height: var(--hHalf3);
     }
-    h1{
+
+    h1 {
         font-size: var(--textXXL2);
     }
-    h2{
+
+    h2 {
         font-size: var(--textXL2);
     }
-    h3{
+
+    h3 {
         font-size: var(--textL2);
     }
-    p{
+
+    p {
         font-size: var(--textM2);
     }
-    small{
+
+    small {
         font-size: var(--textS2)
     }
-    #container{
+
+    #container {
         height: var(--hFullContainer2);
     }
-    
-    #containerSection{
+
+    #containerSection {
         height: var(--hFullContainer2);
     }
-    
-    .section{
-        height: var(--hFullContainer2);;
+
+    .section {
+        height: var(--hFullContainer2);
+        ;
     }
 }
-@media(orientation:landscape){
-    .containerSections{
+
+@media(orientation:landscape) {
+    .containerSections {
         display: flex;
     }
-    .sectionSingle{
+
+    .sectionSingle {
         width: var(--wFull);
     }
-    .sectionSide{
+
+    .sectionSide {
         height: var(--hFullSection);
         width: var(--wHalf);
     }
-    .sectionL{
+
+    .sectionL {
         height: var(--hHalf);
     }
-    .sectionM{
+
+    .sectionM {
         height: var(--hHalf2);
     }
-    h1{
+
+    h1 {
         font-size: var(--textXXL);
     }
-    h2{
+
+    h2 {
         font-size: var(--textXL);
     }
-    h3{
+
+    h3 {
         font-size: var(--textL);
     }
-    p{
+
+    p {
         font-size: var(--textM);
     }
-    small{
+
+    small {
         font-size: var(--textS)
     }
-    #container{
+
+    #container {
         height: var(--hFullContainer);
     }
-    
-    #containerSection{
+
+    #containerSection {
         height: var(--hFullContainer);
     }
-    
-    .section{
-        height: var(--hFullContainer);;
+
+    .section {
+        height: var(--hFullContainer);
+        ;
     }
+
+
+
+
+
+
+
+
+
 }

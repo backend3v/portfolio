@@ -19,6 +19,8 @@ const texts = {
     },
     skills: {
         title: "Skills",
+        skills:"Skills",
+        skillsTechs: "Tecnologíes",
         skillsTech: {
             python: "Web development, data analysis, artificial intelligence, and scientific computing",
             php: "Dynamic web development",
@@ -79,6 +81,8 @@ const texts = {
     },
     jobs: {
         title: "Jobs",
+        jobsT:"Jobs",
+        projectsT:"Projects",
         jobs: [
             {
                 name: "Hospital San Ignacio",
