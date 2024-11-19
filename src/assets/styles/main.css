@@ -62,7 +62,10 @@
         --font2: 'Orbitron',
         --font3: 'Wire One',
 }
-
+#app {
+    height: 100vh;
+    overflow: hidden;
+}
 body {
     padding: 0%;
     margin: 0%;
@@ -70,7 +73,10 @@ body {
     font-size: var(--textM);
     font-family: var(--font1);
     color: var(--colorNeutral);
-    overscroll-behavior: none;
+    /* overscroll-behavior: none; */
+    height: 100vh;
+    overflow: hidden;
+
 }
 
 h1 {
