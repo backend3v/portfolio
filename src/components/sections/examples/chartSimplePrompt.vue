@@ -17,7 +17,7 @@
           |{{item.value}}
           br
           br
-          a(:href="item.link")
+          a(:href="item.path")
             | Link
   
 </template>
