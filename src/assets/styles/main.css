@@ -127,7 +127,7 @@ nav {
 }
 
 .bottonA {
-    height: var(--hS);
+    height: var(--hXS);
     display: grid;
     align-content: center;
     width: var(--wS);
