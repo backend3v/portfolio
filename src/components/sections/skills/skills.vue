@@ -4,11 +4,11 @@
       .containerSections
         
         .sectionSide
-          .headerSection
-            h2(class=" itemsCenter")
+          div(class="headerSection itemsCenter")
+            h2
               |{{ title.title }}
           .gridCarrousel(class="gridSpaceS")
-            div(class="itemTitle")
+            div(class="itemTitle itemsTitle")
               |{{ title.skills }}
             .itemButtonA(class="itemsCenter")
               .bottonA(@click="prev('skills')" class="")|<
@@ -16,25 +16,29 @@
               .carousel
                 #skillsContainer(class="carouselContainer")
                   .gridHalfSections(class="gridSpaceS")
-                    div(class="carouselItem card" v-for="section in visibleContents")
-                      div(class="gridSectionsSkills")
-                        div(class="itemsCenter itemImage headerCard")
-                        h2(class="itemsCenter itemSection headerCard")
-                          |{{ section.name }}
-                        div(class="itemsCenter itemDescription")
-                          div(class="itemsCenter " v-for="text in section.texts")
-                            |{{ text }}
+                    div(class="carouselItem" v-for="section in visibleContents")
+                      .gridSectionContainer
+                        div(class="gridSectionsSkills card ")
+                          div(class="itemsCenter itemImage headerCard")
+                          div(class="itemsCenter itemSection headerCard itemsTitle")
+                            h2
+                              |{{ section.name }}
+                          div(class="itemsCenter itemDescription")
+                            p(class="itemsCenter " v-for="text in section.texts")
+                              |{{ text }}
 
                 #skillsContainer2(class="carouselContainer")
                   .gridHalfSections(class="gridSpaceS")
-                    div(class="carouselItem card" v-for="section in visibleContents2")
-                      div(class="gridSectionsSkills ")
-                        div(class="itemsCenter itemImage headerCard")
-                        h2(class="itemsCenter itemSection headerCard")
-                          |{{ section.name }}
-                        div(class="itemsCenter itemDescription")
-                          div(class="itemsCenter " v-for="text in section.texts")
-                            |{{ text }}
+                    div(class="carouselItem" v-for="section in visibleContents2")
+                      .gridSectionContainer
+                        div(class="gridSectionsSkills card ")
+                          div(class="itemsCenter itemImage headerCard")
+                          div(class="itemsCenter itemSection headerCard itemsTitle")
+                            h2()
+                              |{{ section.name }}
+                          div(class="itemsCenter itemDescription")
+                            p(class="itemsCenter " v-for="text in section.texts")
+                              |{{ text }}
             .itemButtonB(class="itemsCenter")
               .bottonA(@click="next('skills')" class="")|>
             .itemSectionA
@@ -48,12 +52,12 @@
             .carrouselFrame(class="itemSection")
               .carousel
                 #skillsTechContainer(class="carouselContainer")
-                  .gridQuarterSections(class="itemsCenter gridSpaceS")
-                    div(class="carouselItem card" v-for="skill in visibleSkills")
+                  .gridQuarterSections(class="itemsCenter gridSpaceS gridSectionContainer2")
+                    div(class="carouselItem" v-for="skill in visibleSkills")
                       SkillsGrid(:skill="skill" )
                 #skillsTechContainer2(class="carouselContainer")
-                  .gridQuarterSections(class="itemsCenter gridSpaceS")
-                    div(class="carouselItem card" v-for="skill in visibleSkills2")
+                  .gridQuarterSections(class="itemsCenter gridSpaceS gridSectionContainer2")
+                    div(class="carouselItem" v-for="skill in visibleSkills2")
                       SkillsGrid(:skill="skill" )
             .itemButtonB(class="itemsCenter")
               .bottonA(@click="next('skillsTech')" class="")|>
@@ -175,13 +179,13 @@ export default {
     visibleSkills() {
       return this.skills.slice(
         this.currentObjects.skillsTech.current,
-        this.currentObjects.skillsTech.current + 4
+        this.currentObjects.skillsTech.current + 6
       );
     },
     visibleSkills2() {
       return this.skills.slice(
         this.currentObjectsA.skillsTech.current,
-        this.currentObjectsA.skillsTech.current + 4
+        this.currentObjectsA.skillsTech.current + 6
       );
     },
     visibleContents() {

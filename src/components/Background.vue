@@ -12,6 +12,10 @@ export default {
       width:  window.innerWidth,
       height: window.innerHeight,
       render,
+      transport:false,
+      lastScroll:new Date,
+      lastPosition:0,
+      sections:[0,90,180,270]
     };
   },
   props: {
@@ -22,7 +26,23 @@ export default {
   watch: {
     position: function (val) {
       this.render.position = val
+      
       console.log("44",val)
+      this.transport = true
+      var time = new Date;
+      var dif = time - this.lastScroll;
+      if(dif > 3000){
+        console.log("SCROLL",this.section)
+        console.log("DIFERENCIA",val - this.lastPosition)
+        this.lastScroll = time
+      }
+      console.log(dif)
+      
+
+    },
+    transport: function (val) {
+      console.log("TRANS",val)
+      this.transport = false
     }
   },
   methods: {

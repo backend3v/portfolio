@@ -2,10 +2,10 @@
     #jobs(class="section")
         section
             .containerSections
-                
                 .sectionSide
-                  h2(class="headerSection itemsCenter")
-                    |{{ title.title }}
+                  div(class="headerSection itemsCenter")
+                    h2
+                      |{{ title.title }}
                   .gridCarrousel(class="gridSpaceS")
                     div(class="itemTitle")
                       |{{ title.jobs }}
@@ -15,42 +15,52 @@
                       .carousel
                           #jobsContainer(class="carouselContainer")
                             .gridHalfSections(class="gridSpaceS")
-                              div(class="carouselItem card",v-for="section in visibleJobs" )
-                                .gridJobs()
-                                    .itemImage(class="headerCard itemsCenter")
-                                        img(class="imageM" :src="section.image")
-                                    h2(class="itemsCenter itemPlace headerCard")
-                                        |{{ section.place }}
-                                    p(class="itemCity itemsCenter headerCard")
-                                        |{{ section.city }}
-                                    p(class="itemsCenter itemPosition headerCard")
-                                        |{{ section.position }}
-                                    div(class="itemsCenter itemDescription")
-                                        p
-                                            |{{ section.description[0] }}
-                                        p
-                                            |{{ section.description[1]}}
-                                    p(class="itemDate itemsCenter headerCard")
-                                        |{{ section.date }}
+                              div(class="carouselItem",v-for="section in visibleJobs" )
+                                .gridSectionContainer
+                                  .gridJobs(class=" card")
+                                        .itemImage(class="headerCard itemsCenter contImageM")
+                                            img(class="imageM" :src="section.image")
+                                        div(class="itemsCenter itemPlace headerCard itemsTitle")
+                                          h2(class="itemsCenter")
+                                              |{{ section.place }}
+                                        div(class="itemsCenter itemCity headerCard itemsTitle")
+                                          p(class="itemsCenter")
+                                              |{{ section.city }}
+                                        div(class="itemsCenter itemPosition headerCard itemsTitle")
+                                          p(class="itemsCenter")
+                                              |{{ section.position }}
+                                        div(class="itemsCenter itemDescription")
+                                            p(class="itemsSectionL itemsCenter")
+                                                |{{ section.description[0] }}
+                                            p(class="itemsSectionL itemsCenter")
+                                                |{{ section.description[1]}}
+                                        div(class="itemsCenter itemDate headerCard itemsTitle")
+                                          small
+                                              |{{ section.date }}
                           #jobsContainer2(class="carouselContainer")
                             .gridHalfSections(class="gridSpaceS")
-                              div(class="carouselItem card",v-for="section in visibleJobs2" )
-                                .gridJobs()
-                                        .itemImage(class="headerCard itemsCenter")
+                              div(class="carouselItem",v-for="section in visibleJobs2" )
+                                .gridSectionContainer
+                                  .gridJobs(class=" card")
+                                        .itemImage(class="headerCard itemsCenter contImageM")
                                             img(class="imageM" :src="section.image")
-                                        h2(class="itemsCenter itemPlace headerCard")
-                                            |{{ section.place }}
-                                        p(class="itemCity itemsCenter headerCard")
-                                            |{{ section.city }}
-                                        p(class="itemsCenter itemPosition headerCard")
-                                            |{{ section.position }}
+                                        div(class="itemsCenter itemPlace headerCard itemsTitle")
+                                          h2(class="itemsCenter")
+                                              |{{ section.place }}
+                                        div(class="itemsCenter itemCity headerCard itemsTitle")
+                                          p(class="itemsCenter")
+                                              |{{ section.city }}
+                                        div(class="itemsCenter itemPosition headerCard itemsTitle")
+                                          p(class="itemsCenter")
+                                              |{{ section.position }}
                                         div(class="itemsCenter itemDescription")
-                                            p
+                                            p(class="itemsSectionL itemsCenter")
                                                 |{{ section.description[0] }}
-                                            p
+                                            p(class="itemsSectionL itemsCenter")
                                                 |{{ section.description[1]}}
-                                        p(class="itemDate itemsCenter headerCard")
-                                            |{{ section.date }}
+                                        div(class="itemsCenter itemDate headerCard itemsTitle")
+                                          small
+                                              |{{ section.date }}
                     .itemButtonB(class="itemsCenter")
                       .bottonA(@click="next('jobs')" class="")|>
                     .itemSectionA
@@ -67,28 +77,32 @@
                           #projectsContainer(class="carouselContainer")
                             .gridHalfSections(class="gridSpaceS")
                               div(class="carouselItem" v-for="section in visibleProjects")
+                                .gridSectionContainer
                                   .gridProjects(class="card")
-                                      .itemImage(class="headerCard itemsCenter")
+                                      .itemImage(class="headerCard itemsCenter itemsSectionXL")
                                           img(class="imageL" :src="section.image")
-                                      h2(class="itemsCenter itemName headerCard")
-                                          |{{ section.name }}
+                                      div(class="itemsCenter itemName headerCard itemsTitle")
+                                        h2
+                                            |{{ section.name }}
                                       div(class="itemsCenter itemDescription")
-                                          p
+                                          p(class="itemsSectionL itemsCenter")
                                               |{{ section.description[0] }}
-                                          p
+                                          p(class="itemsSectionL itemsCenter")
                                               |{{ section.description[1]}}
                           #projectsContainer2(class="carouselContainer")
                             .gridHalfSections(class="gridSpaceS")
                               div(class="carouselItem" v-for="section in visibleProjects2")
+                                .gridSectionContainer
                                   .gridProjects(class="card")
-                                      .itemImage(class="headerCard itemsCenter")
+                                      .itemImage(class="headerCard itemsCenter itemsSectionXL")
                                           img(class="imageL" :src="section.image")
-                                      h2(class="itemsCenter itemName headerCard")
-                                          |{{ section.name }}
+                                      div(class="itemsCenter itemName headerCard itemsTitle")
+                                        h2
+                                            |{{ section.name }}
                                       div(class="itemsCenter itemDescription")
-                                          p
+                                          p(class="itemsSectionL itemsCenter")
                                               |{{ section.description[0] }}
-                                          p
+                                          p(class="itemsSectionL itemsCenter")
                                               |{{ section.description[1]}}
                     .itemButtonB(class="itemsCenter")
                       .bottonA(@click="next('projects')" class="")|>

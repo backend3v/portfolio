@@ -16,25 +16,25 @@
     --hFullContainer: 90vh;
     --hFullContainer2: 90vh;
     --hFullContainer3: 75vh;
-    --hHalfContainer: 42.5vh;
+    --hHalfContainer: 38vh;
     --hRadius: 45vh;
-    --hFullSection: 82vh;
-    --textS: 0.5vh;
+    --hFullSection: 88vh;
+    --textS: 1.25vh;
     --textM: 1.55vh;
-    --textL: 1.5vh;
+    --textL: 1.8vh;
     --textXL: 2vh;
     --textXXL: 3vh;
-    --textS2: 0.3vw;
-    --textM2: 1.8vw;
-    --textL2: 1.5vw;
-    --textXL2: 2vw;
-    --textXXL2: 3vw;
+    --textS2: 1vh;
+    --textM2: 1.3vh;
+    --textL2: 1.6vh;
+    --textXL2: 1.9vh;
+    --textXXL2: 3vh;
     --wSix: 15.6vw;
     --wSix2: 32vw;
-    --wQuarter: 23.8vw;
-    --wQuarter2: 48.6vw;
+    --wQuarter: 23.475vw;
+    --wQuarter2: 48.3vw;
     --wHalf: 48vw;
-    --wHalf2: 48.5vw;
+    --wHalf2: 48.3vw;
     --hXXXS: 0.5vh;
     --hXXS: 1vh;
     --hXS: 3vh;
@@ -62,6 +62,7 @@
         --font2: 'Orbitron',
         --font3: 'Wire One',
 }
+
 #app {
     height: 100vh;
     overflow: hidden;
@@ -107,7 +108,18 @@ p {
 small {
     font-size: var(--textS)
 }
-
+.itemsTitle{
+    height: var(--hXS);
+}
+.itemsSectionL{
+    height: var(--hL);
+}
+.itemsSectionXL{
+    height: calc(var(--hHalf) * 0.515);
+}
+.contImageM{
+    height: var(--hIM);
+}
 .itemsCenter {
     align-items: center;
     text-align: center;
@@ -193,6 +205,7 @@ nav {
 
 .card {
     background-color: var(--colorBackCard);
+    border:5px aliceblue solid
 }
 
 .headerCard {
@@ -250,7 +263,7 @@ nav {
     display: grid;
     align-items: center;
     text-align: center;
-    padding: var(--hXXS) var(--wXXS);
+    padding: var(--hXS) var(--wXXS);
 }
 
 .sectionSingle {
@@ -272,7 +285,7 @@ nav {
 
 .headerSection {
     position: absolute;
-    height: var(--hHS);
+    /* height: var(--hHS); */
     top: 0vh;
     left: 0vw;
     width: var(--wFull);
@@ -285,22 +298,37 @@ nav {
 }
 
 .imageM {
-    width: var(--hS);
-    height: var(--hS);
+    width: calc(var(--wS) * 0.75);
+    height: calc(var(--wS) * 0.75);
+    background-color: aliceblue;
+}
+.imageMPad{
+    margin: 1.55vw;
 }
 
 .imageL {
-    width: var(--hSM);
-    height: var(--hSM);
+    width: calc(var(--wL) * 0.55);
+    height: calc(var(--wL) * 0.55);
 }
 
-
+.gridSectionContainer{
+    height: 33vh;
+    width: 47.2vw;
+    align-items: center;
+    align-content: center;
+}
+.gridSectionContainer2{
+    height: 66vh;
+    width: 49vw;
+    align-items: center;
+    align-content: center;
+}
 
 
 .carousel {
     display: flex;
     align-items: center;
-    width:200%
+    width:100%
 }
 .carrouselFrame{
     overflow: hidden;
@@ -331,6 +359,20 @@ nav {
 
 
 @media(orientation:portrait) {
+    .gridSectionContainer{
+        height: 33vh;
+        width: 48.3vw;
+    }
+    .itemsSectionL{
+        height: calc(var(--hL)*0.8);
+    }
+    .gridSectionContainer2{
+        height: 33vh;
+        
+    }
+    .carousel {
+        width:200%
+    }
     .containerSections {
         display: block;
     }
@@ -387,6 +429,16 @@ nav {
 }
 
 @media(orientation:landscape) {
+    .gridSectionContainer{
+        height: 33vh;
+        width: 47.4vw;
+    }
+    .itemsSectionL{
+        height: var(--hL);
+    }
+    .gridSectionContainer2{
+        height: 66.5vh;
+    }
     .containerSections {
         display: flex;
     }
@@ -439,6 +491,9 @@ nav {
     .section {
         height: var(--hFullContainer);
         ;
+    }
+    .carousel {
+        width:100%
     }
 
 

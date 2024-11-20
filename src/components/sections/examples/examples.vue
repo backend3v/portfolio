@@ -5,26 +5,25 @@
         .headerSection
           |{{ title }}
         .sectionSingle(class="itemsCenter")
-          .card
-            div(class="gridExamples")
-              .itemBar(class="headerCard itemsCenter")
-                div(class="itemsCenter")
-                  input(id="inputExample" type="text")
-                
-              .itemSectionA(class="headerCard itemsCenter")
-                div(class="itemsCenter bottonA" @click="sendPromptSimple()")|Send
-              .itemMenu(class="headerCard")
-              #SectionExample(class="itemSection")
-                ChartSimplePrompt(
-                  v-bind:data="comparative" 
-                  v-bind:title="titlePromptSection" 
-                  v-bind:image="imagePrompSection" 
-                  v-bind:summary="summaryPromptSection" 
-                  v-bind:news="newsPromptSection"
-                  v-bind:lineColors="lineColorsPromptSection"
-                  v-bind:comparativeDescription="comparativePromptSection" 
-                  v-if="res"
-                  )
+          div(class="card gridExamples")
+            .itemBar(class="headerCard itemsCenter")
+              div(class="itemsCenter")
+                input(id="inputExample" type="text" class="itemsTitle")
+              
+            .itemSectionA(class="headerCard itemsCenter")
+              div(class="itemsCenter bottonA" @click="sendPromptSimple()")|Send
+            .itemMenu(class="headerCard")
+            #SectionExample(class="itemSection")
+              ChartSimplePrompt(
+                v-bind:data="comparative" 
+                v-bind:title="titlePromptSection" 
+                v-bind:image="imagePrompSection" 
+                v-bind:summary="summaryPromptSection" 
+                v-bind:news="newsPromptSection"
+                v-bind:lineColors="lineColorsPromptSection"
+                v-bind:comparativeDescription="comparativePromptSection" 
+                v-if="res"
+                )
           .footerSection
             div
                 |+

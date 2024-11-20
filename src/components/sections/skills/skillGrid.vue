@@ -1,7 +1,7 @@
 <template lang="pug">
     div(class="card gridSkills")
       div(class="itemImage headerCard itemsCenter")
-        img(:src="skill.image" class="imageM")
+        img(:src="skill.image" class="imageM imageMPad")
       h2(class="itemsCenter itemName headerCard")
           |{{skill.name}}
       p(class="itemsCenter itemDescription")

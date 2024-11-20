@@ -98,7 +98,7 @@
   grid-template:
     "image section section section"
     "description description description description";
-  grid-template-rows: var(--hXS) var(--hXL);
+  grid-template-rows: var(--hXS) calc(var(--hXL) * 1.2);
   grid-template-columns: var(--wXS) auto auto auto;
 }
 
@@ -118,6 +118,7 @@
     "image description description description";
   grid-template-rows: var(--hXS) var(--hL);
   grid-template-columns: var(--wM) auto auto auto;
+
 }
 
 .gridExamples {
@@ -151,6 +152,10 @@
     grid-template-rows: var(--hXS) var(--hS);
     grid-template-columns: var(--wSM) auto auto;
   }
+  .gridJobs {
+    grid-template-rows: var(--hXS) var(--hXS) calc(var(--hL)*1.6) ;
+    grid-template-columns: var(--wS) auto auto auto;
+  }
   .gridQuarterSections {
     display: grid;
     grid-template-columns: var(--wQuarter2) var(--wQuarter2);
@@ -167,6 +172,11 @@
     grid-column-gap: var(--wS);
     grid-row-gap: var(--hS);
   }
+  .gridProjects {
+    grid-template-rows: var(--hXS) calc(var(--hL) * 2.28);
+    grid-template-columns: var(--wM) auto auto auto;
+  
+  }
 }
 @media (orientation: landscape) {
   .gridHalfSections {
@@ -177,11 +187,11 @@
     grid-template-columns: var(--wSix) var(--wSix) var(--wSix);
   }
   .gridSkills {
-    grid-template-rows: var(--hXS) var(--hM);
+    grid-template-rows: var(--hXS) calc(var(--hIM) * 2.48);
     grid-template-columns: var(--wSM) auto auto;
   }
   .gridJobs {
-    grid-template-rows: var(--hXS) var(--hXS) var(--hXS) var(--hXS);
+    grid-template-rows: var(--hXS) var(--hXS) calc(var(--hL)*2) ;
     grid-template-columns: var(--wS) auto auto auto;
   }
   .gridQuarterSections {
@@ -199,5 +209,10 @@
   .gridSpaceL {
     grid-column-gap: var(--wXS);
     grid-row-gap: var(--hXS);
+  }
+  .gridProjects {
+    grid-template-rows: var(--hXS) calc(var(--hL) * 2.28);
+    grid-template-columns: var(--wM) auto auto auto;
+  
   }
 }

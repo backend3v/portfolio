@@ -125,6 +125,20 @@ export default {
         }else{
           this.changed = false
         }
+        const delayPos = 9
+        if(this.position >= (0 + delayPos) & this.position < (90 - delayPos)){
+          console.log("POS 0",this.position )
+          
+        }
+        if(this.position >= (90 + delayPos) & this.position < (180 - delayPos)){
+          console.log("POS 1")
+        }
+        if(this.position >= (180 + delayPos) & this.position < (270 - delayPos)){
+          console.log("POS 2")
+        }
+        if(this.position >= 270){
+            console.log("POS 3")
+        }
 
 
        }
