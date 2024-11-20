@@ -205,7 +205,7 @@ nav {
 
 .card {
     background-color: var(--colorBackCard);
-    border:5px aliceblue solid
+    border:0.3vw var(--colorMainW) solid
 }
 
 .headerCard {
