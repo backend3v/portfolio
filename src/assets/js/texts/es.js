@@ -174,7 +174,8 @@ const texts = {
         ]
     },
     examples:{
-        title:"Ejemplos"
+        title:"Ejemplos",
+        infoExample:["En esta seccion puedes probar mi IA","A continuacion se presenta una aplicacion de ejemplo.","En el buscador puedes colocar una palabra o una frase referente a un tema y la IA se encargara de generar un infograma con descripciones y una grafica comparativa en relacion a este tema","","","Ejemplos:","","-Colombia","-Inteligencia Artificial","Futbol","Estadio Nemesio Camacho El Campin","","","Como puedes ver pueden ser Lugares, Organizaciones, Personas o algun topico de tu interes","Ten en cuenta que la frase se evaluara en su longitud total; no se recomienda que sean demasiado largas, ya que la IA no es muy eficiente en estos casos y trata de que sea coherente y lo menos abstracto posible.","Disfrutalo!"],
     }
   };
 export default texts;

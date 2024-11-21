@@ -15,7 +15,9 @@ export default {
       transport:false,
       lastScroll:new Date,
       lastPosition:0,
-      sections:[0,90,180,270]
+      sections:[0,90,180,270],
+      nextSection:0,
+      block:false,
     };
   },
   props: {
@@ -25,28 +27,37 @@ export default {
   },
   watch: {
     position: function (val) {
-      this.render.position = val
       
-      console.log("44",val)
-      this.transport = true
-      var time = new Date;
-      var dif = time - this.lastScroll;
-      if(dif > 3000){
-        console.log("SCROLL",this.section)
-        console.log("DIFERENCIA",val - this.lastPosition)
-        this.lastScroll = time
+      if(!this.block){
+        console.log("333AA",val - this.lastPosition)
+        const dif = val - this.lastPosition
+        if(dif == -3 || dif == 3){
+          document.getElementById("containerSection").style.transitionDuration = '0s'
+        }else{
+          document.getElementById("containerSection").style.transitionDuration = '0.5s'
+        }
+        this.render.position = val
+        this.lastPosition = val
+        ///let dir = "down"
+        //console.log("44",val)
+        //this.transport = true
+        
       }
-      console.log(dif)
+      
       
 
     },
-    transport: function (val) {
-      console.log("TRANS",val)
-      this.transport = false
-    }
+
   },
   methods: {
-
+    getToSection(i,h){
+      console.log(i)
+      this.$parent.block=true
+      if(i == h){
+        this.$parent.block=false
+        console.log("FFIINN")
+      }
+    }
   },
   mounted() {
     console.log(this.position)

@@ -13,7 +13,7 @@
             .itemSectionA(class="headerCard itemsCenter")
               div(class="itemsCenter bottonA" @click="sendPromptSimple()")|Send
             .itemMenu(class="headerCard")
-            #SectionExample(class="itemSection")
+            #SectionExample(class="itemSection itemsCenter")
               ChartSimplePrompt(
                 v-bind:data="comparative" 
                 v-bind:title="titlePromptSection" 
@@ -24,6 +24,10 @@
                 v-bind:comparativeDescription="comparativePromptSection" 
                 v-if="res"
                 )
+              .itemsCenter(v-else )
+                h2(v-for="i in infoExamples")
+                  | {{i}}
+                  br
           .footerSection
             div
                 |+
@@ -36,7 +40,7 @@ export default {
   name: "ExamplesContainer",
   data() {
     return {
-      title: "Examples",
+      //title: "Examples",
       titlePromptSection: "",
       imagePrompSection: "",
       summaryPromptSection: "",
@@ -58,7 +62,10 @@ export default {
     };
   },
   computed: {},
-  props: {},
+  props: {
+    title: String,
+    infoExamples:String
+  },
   methods: {
     async sendPromptSimple() {
       const prompt = document.getElementById("inputExample").value;

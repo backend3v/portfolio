@@ -21,7 +21,10 @@
         v-bind:projects='jobsProjects',
         v-bind:change='jobsChange',
         )
-      ExamplesContainer()
+      ExamplesContainer(
+        v-bind:title='titleExamples',
+        v-bind:infoExamples='infoExamples'
+      )
 </template>
 
 <script>
@@ -33,6 +36,7 @@ import {
   getPresentationSections,
   getSkillsSections,
   getJobsSections,
+  getExamplesSections
 } from "../assets/js/templates/sectionsw.js";
 
 //import sections from '@/assets/js/templates/sectionsw.js';
@@ -57,6 +61,8 @@ export default {
       jobsProjects: getJobsSections(this.data.default).content.projects,
       jobsChange: ["", ""],
       skillsChange: ["", ""],
+      titleExamples: getExamplesSections(this.data.default).title,
+      infoExamples: getExamplesSections(this.data.default).info,
       // examplesTexts:getExamplesSections(r),
       //textsw:require("./../assets/js/templates/sectionsw.js"),
     };
@@ -93,6 +99,11 @@ export default {
       this.jobsTitle = this.jobsTexts.titles;
       this.jobsJobs = this.jobsTexts.content.jobs;
       this.jobsProjects = this.jobsTexts.content.projects;
+
+      this.exampleTexts = getExamplesSections(t.default);
+      this.titleExamples= this.exampleTexts.title
+      this.infoExamples= this.exampleTexts.info
+
     },
   },
   methods: {

@@ -238,7 +238,8 @@ class Sections{
     }
     getExamplesSections() {
         return {
-            title:"Ejemplos",
+            title:this.langTexts.examples["title"],
+            info:this.langTexts.examples["infoExample"]
         }
     }
 }

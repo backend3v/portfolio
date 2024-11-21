@@ -33,10 +33,27 @@ export default {
       examplesT:getExamplesSections(),
       languaje:"es",
       data:require("./../assets/js/texts/es.js"),
+      lastScroll:new Date,
+      nextSection:0,
+      actualSection:0,
+      AllSections:[0,90,180,270],
+      block:false
     }
   },
 
   methods: {
+    // moveSection(to,i){
+    //   //console.log("TO ",this.AllSections[to],i)
+    //   this.position = i+1
+    // },
+    // getToSection(to){
+    //   //console.log("444",to,this.position)
+    //   for(let i = this.position; i < this.AllSections[to]; i++){
+    //     setTimeout(()=>this.moveSection(to,i),100)
+        
+    //   }
+    //   this.block=false
+    // },
     changeLang(lang){
       //const t = require(`@/assets/js/texts/${lang}`);
       this.languaje = lang
@@ -46,16 +63,20 @@ export default {
       console.log(e)
     } ,
     whelling(e){
-      let direction = "down"
-      const whell = e.deltaY
-      if(whell > 0){
-        direction = "down"
-      }else{
-        direction = "up"
+      if(!this.block){
+        let direction = "down"
+        const whell = e.deltaY
+        if(whell > 0){
+          direction = "down"
+        }else{
+          direction = "up"
+        }
+        
+        this.scrolling(direction)
+        this.scrolling(direction)
+        this.scrolling(direction)
       }
-      this.scrolling(direction)
-      this.scrolling(direction)
-      this.scrolling(direction)
+      
     },
     touchinMove(e){
       let direction = "up"
@@ -68,32 +89,40 @@ export default {
       this.scrolling(direction)
       this.prevPosition = this.actualPosition
     } ,
-    scrolling(direction){
-        if(direction == "down"){
-          this.position = (this.position + 1 > 359) ? 0 : this.position + 1
-          this.direction = "down"
-        }else{
-          this.position = (this.position - 1 < 0) ? 359 : this.position - 1
-          this.direction = "up"
-        }
-        if((this.position > 315 && this.position <= 359) || (this.position >= 0 && this.position <= 45)){
+    ani(){
+      document.getElementById("containerSection").style.transitionDuration = '0.5s'
+    },
+    updateSections(){
+      // if(this.position < 5 || this.position > 350){
+      //   document.getElementById("containerSection").style.transitionDuration = '0s'
+      // }
+      // else{
+      //   document.getElementById("containerSection").style.transitionDuration = '0.5s'
+      // }
+      
+      if((this.position > 315 && this.position <= 359) || (this.position >= 0 && this.position <= 45)){
           this.section = "presentation"
+          this.actualSection = 0
           if(this.position >=0 && this.position <= 45){
             this.joinSection = "skills"
           }else{
             this.joinSection = "examples"
           }
+          
         }
         else if(this.position > 45 && this.position <= 135){
           this.section = "skills"
+          this.actualSection = 1
           if(this.position <= 90){
             this.joinSection = "presentation"
           }else{
             this.joinSection = "jobs"
           }
+          
         }
         else if(this.position > 135 && this.position <= 225){
           this.section = "jobs"
+          this.actualSection = 2
           if(this.position <= 180){
             this.joinSection = "skills"
           }else{
@@ -102,6 +131,7 @@ export default {
         }
         else if(this.position > 225 && this.position <= 315){
           this.section = "examples"
+          this.actualSection = 3
           if(this.position <= 270){
             this.joinSection = "jobs"
           }else{
@@ -125,23 +155,38 @@ export default {
         }else{
           this.changed = false
         }
-        const delayPos = 9
-        if(this.position >= (0 + delayPos) & this.position < (90 - delayPos)){
-          console.log("POS 0",this.position )
-          
+    },
+    
+    scrolling(direction){
+        if(direction == "down"){
+          this.position = (this.position + 1 > 359) ? 0 : this.position + 1
+          this.direction = "down"
+        }else{
+          this.position = (this.position - 1 < 0) ? 359 : this.position - 1
+          this.direction = "up"
         }
-        if(this.position >= (90 + delayPos) & this.position < (180 - delayPos)){
-          console.log("POS 1")
-        }
-        if(this.position >= (180 + delayPos) & this.position < (270 - delayPos)){
-          console.log("POS 2")
-        }
-        if(this.position >= 270){
-            console.log("POS 3")
-        }
+        this.updateSections()
+        
+      //   var time = new Date;
+      //   var dif = time - this.lastScroll;
+      //   console.log("T ",dif)
+      //   if(dif > 3000){
+      //     this.block = true
+      //     //let nextSection = 0
+      //     if(this.direction == "down"){
+      //       this.nextSection = (this.actualSection + 1 <= 3) ? this.actualSection + 1 : 0
+      //       await this.getToSection(this.nextSection)
+      //     }
+      //     if(this.direction == "up"){
+      //       this.nextSection = (this.actualSection - 1 < 0) ? 3 : this.actualSection - 1
+      //       await this.getToSection(this.nextSection)
+
+      //     }
+      //     console.log("NEXCT SECTION",this.nextSection)
 
 
-       }
+      //  }
+      }
 
 
     },
@@ -153,6 +198,10 @@ export default {
         elementSection.style.visibility = "hidden"
         const elementJoinSection = document.getElementById("examples")
         elementJoinSection.style.visibility = "hidden"
+        // const box = document.getElementById('containerSection');
+        //   box.addEventListener('wheel', () => {
+        //   box.style.transitionDuration = '0'
+        // });
     },
     beforeMount() {
       //this.chengeLang("en")

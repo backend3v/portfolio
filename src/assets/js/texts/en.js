@@ -169,7 +169,8 @@ const texts = {
         ]
     },
     examples: {
-        title: "Examples"
+        title: "Examples",
+        infoExample:["In this section, you can try my AI","Next, an example application is presented.","In the search bar, you can enter a word or a phrase related to a topic, and the AI will generate an infographic with descriptions and a comparative graph related to this topic","","","Examples:","","-Colombia","-Artificial Intelligence","Soccer","Nemésio Camacho El Campin Stadium","","","As you can see, they can be Places, Organizations, People, or any topic of your interest","Keep in mind that the phrase will be evaluated based on its total length; it is not recommended to make them too long, as the AI is not very efficient in these cases, and try to keep it coherent and as non-abstract as possible.","Enjoy!"]
     }
 };
 export default texts;

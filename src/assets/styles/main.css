@@ -67,6 +67,9 @@
     height: 100vh;
     overflow: hidden;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     padding: 0%;
     margin: 0%;
@@ -127,11 +130,12 @@ small {
 }
 
 .footerContainer {
-    height: var(--hMS);
+    height: var(--hSM);
     width: var(--wFull);
     background-color: var(--colorMain);
     position: absolute;
-    bottom: calc(var(--hXXS) * 5);
+    /* bottom: calc(var(--hXXS) * 5); */
+    bottom: 0px;
 }
 
 nav {
@@ -179,6 +183,11 @@ nav {
     transform: rotateX(0deg);
     padding: 0;
     margin: 0px;
+    /* transition: transform 0.5s ease; */
+    transition-property: transform;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+
 }
 
 .section {

@@ -83,7 +83,13 @@
   grid-template-columns: auto var(--wS) var(--wS) auto;
   border: 0.3vw var(--colorHeaderW) solid;
 }
-
+.gridNav {
+    display: grid;
+    grid-template:
+      "sectona sectonb";
+    grid-template-rows: var(--hHS) ;
+    grid-template-columns: var(--wS) auto ;
+  }
 .gridJobs {
   display: grid;
   grid-template:

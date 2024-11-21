@@ -3,7 +3,7 @@ import * as THREE from 'three';
 class Render {
     background1="images/01.png"
     background2="images/02.png"
-    background='11,18,24'//'26,33,39'
+    background='01,08,14'//'26,33,39'
     alpha=0.5
     scene
     camera
@@ -11,8 +11,8 @@ class Render {
     light
     targetObserver
     //Ball
-    colorBaseBall='31,38,44'//'28,35,41'
-    colorCenterBall='31,38,44'
+    colorBaseBall='25,30,56'//'28,35,41'
+    colorCenterBall='31,38,64'
     cantBalls=100
     planes=[]
     ball
@@ -27,7 +27,7 @@ class Render {
     nodeScale = 0.5
     //Background
     colorBackground1='48,45,65'
-    colorBackground2='35,48,60'
+    colorBackground2='65,88,120'
     cube
     width
     height
@@ -208,7 +208,19 @@ class Render {
         this.animationBackground()
         this.renderer.render(this.scene, this.camera);
 
+        
     }
+    m(){
+        for(let i=0;i<40;i++){
+            console.log(i)
+            
+        }
+        return "3"
+    }
+    move(){
+        setTimeout(() => this.m(), 1000);
+    }
+    
 }
 
 // Export the Render constructor
