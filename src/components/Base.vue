@@ -1,7 +1,7 @@
 <template lang="pug">
   main
     NavigationBar
-    BackgroundComponent(v-bind:position='position', v-bind:section='section', v-bind:direction='direction')
+    BackgroundComponent(v-bind:position='position', v-bind:section='section', v-bind:direction='direction',v-bind:changed='changed')
     SectionContainer(v-bind:data='data',v-bind:languaje='languaje',v-bind:presentationTexts='presentationT',v-bind:skillsTexts='skillsT',v-bind:jobsTexts='jobsT',v-bind:examplesTexts='examplesT')
     FooterContainer
 </template>
@@ -23,7 +23,7 @@ export default {
       joinSection:"skills",
       direction:"down",
       visibleSections:["presentation", "skills"],
-      changed:true,
+      changed:false,
       sections:["presentation", "skills", "jobs", "examples"],
       prevPosition:0,
       actualPosition:0,
@@ -140,20 +140,17 @@ export default {
         }
         if(!this.visibleSections.includes(this.section) || !this.visibleSections.includes(this.joinSection)){
           this.visibleSections = [this.section, this.joinSection]
-          this.changed = true
           for(let i of this.sections){
             if(!this.visibleSections.includes(i)){
-              console.log(i+"n")
+              
               const element = document.getElementById(i)
               element.style.visibility = "hidden"
             }else{
-              console.log(i+"y")
+              
               const element = document.getElementById(i)
               element.style.visibility = "visible"
             }
           }
-        }else{
-          this.changed = false
         }
     },
     

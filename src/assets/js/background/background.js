@@ -210,16 +210,7 @@ class Render {
 
         
     }
-    m(){
-        for(let i=0;i<40;i++){
-            console.log(i)
-            
-        }
-        return "3"
-    }
-    move(){
-        setTimeout(() => this.m(), 1000);
-    }
+
     
 }
 

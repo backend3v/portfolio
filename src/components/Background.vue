@@ -23,15 +23,15 @@ export default {
   props: {
     position:Number,
     section:String,
-    direction:String
+    direction:String,
+    changed:Boolean
   },
   watch: {
     position: function (val) {
-      
-      if(!this.block){
-        console.log("333AA",val - this.lastPosition)
+
+        
         const dif = val - this.lastPosition
-        if(dif == -3 || dif == 3){
+        if(dif >= -30 && dif <= 30){
           document.getElementById("containerSection").style.transitionDuration = '0s'
         }else{
           document.getElementById("containerSection").style.transitionDuration = '0.5s'
@@ -42,7 +42,7 @@ export default {
         //console.log("44",val)
         //this.transport = true
         
-      }
+      
       
       
 
@@ -50,17 +50,9 @@ export default {
 
   },
   methods: {
-    getToSection(i,h){
-      console.log(i)
-      this.$parent.block=true
-      if(i == h){
-        this.$parent.block=false
-        console.log("FFIINN")
-      }
-    }
+
   },
   mounted() {
-    console.log(this.position)
     this.render = initRender(this.width, this.height,60);
   }
 }
