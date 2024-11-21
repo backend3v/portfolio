@@ -108,9 +108,6 @@
                       .bottonA(@click="next('projects')" class="")|>
                     .itemSectionA
                     .itemSectionB
-                  .footerSection
-                      div
-                          |+
 
 </template>
 

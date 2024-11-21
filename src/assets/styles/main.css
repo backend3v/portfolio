@@ -12,6 +12,7 @@
     --colorPresentation: rgb(102, 255, 255);
     --colorAccent: rgb(245, 245, 245);
     --colorNeutral: rgb(225, 225, 225);
+    --colorBackground: rgb(22,30,37);
     --wFull: 100vw;
     --wFull2: 98.2vw;
     --hFullContainer: 90vh;
@@ -147,7 +148,7 @@ nav {
     top: 0px;
     height: var(--hXS);
     width: var(--wFull);
-    ;
+    border-bottom: solid 1px var(--colorMainW2);
     background-color: var(--colorMain);
     display: flex;
 }
@@ -161,15 +162,16 @@ nav {
     align-content: center;
     width: var(--wS);
     text-align: center;
-    background-color: var(--colorMainW2);
-    color:var(--colorMain);
+    background-color: var(--colorHeaderW);
+    color:var(--colorNeutral);
     /* border-radius: 5%; */
     cursor: pointer;
 
 }
 .bottonA:hover {
-    background-color: var(--colorHeaderW);
-    color:var(--colorMainW2);
+    
+    background-color: var(--colorMainW2);
+    color:var(--colorMain);
     
 }
 

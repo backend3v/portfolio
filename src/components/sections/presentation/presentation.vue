@@ -24,9 +24,6 @@
                       h3(v-else)
                         |{{ contact[0] }}
                   br
-            .footerSection
-              div
-                |+
 </template>
 
 <script>

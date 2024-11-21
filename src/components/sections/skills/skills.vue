@@ -63,9 +63,6 @@
               .bottonA(@click="next('skillsTech')" class="")|>
             .itemSectionA
             .itemSectionB
-          .footerSection
-            div
-              |+ 
 </template>
 
 <script>

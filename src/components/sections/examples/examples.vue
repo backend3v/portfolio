@@ -28,9 +28,6 @@
                 h2(v-for="i in infoExamples")
                   | {{i}}
                   br
-          .footerSection
-            div
-                |+
 </template>
 
 <script>
