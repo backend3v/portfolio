@@ -21,27 +21,34 @@ const paths = {
       postgresql:"./images/skills/postgresql.png",
       linux:"./images/skills/linux.png",
       ruby:"./images/skills/ruby.png",
+      blockchain:"./images/skills/blockchain.png",
+      aws:"./images/skills/aws.png",
+      flutter:"./images/skills/flutter.png",
+      terraform:"./images/skills/terraform.png",
+      solidity:"./images/skills/solidity.png",
+      scikit:"./images/skills/scikit.png",
     },
     jobs:{
       husi:"./images/jobs/husi.png",
       biznaga:"./images/jobs/biznaga.png",
+      mango:"./images/jobs/mango.png",
       tulpep:"./images/jobs/tulpep.png",
       symplifica:"./images/jobs/symplifica.png",
       stradata:"./images/jobs/stradata.png",
       alphabeth:[
-        "./images/jobs/alphabeth.png",
+        "./images/skills/blockchain.png",
         "https://colab.research.google.com/drive/12cT7DJaHu13vvtjV8A57oObheXRLPank"
       ],
       dorean:[
-        "./images/jobs/dorean.png",
+        "./images/skills/aws.png",
         "https://github.com/muluk-code/codes/tree/master/proyecto_Dorean"
       ],
       btc:[
-        "./images/jobs/btc.png",
+        "./images/skills/ruby.png",
         "https://colab.research.google.com/drive/1T-ym4onI8Ae9zz_XWkccCzo9LNM9xpQh"
       ],
       estadistica:[
-        "./images/jobs/estadistica.png",
+        "./images/skills/php.png",
         "https://colab.research.google.com/drive/1ls_qLQ3Xyb_yo1jDI7KsVOYjKJvnHOgz?usp=sharing"
       ]
       

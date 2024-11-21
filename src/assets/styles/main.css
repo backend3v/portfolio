@@ -327,7 +327,7 @@ nav {
 .imageM {
     width: calc(var(--wS) * 0.75);
     height: calc(var(--wS) * 0.75);
-    background-color: aliceblue;
+    background-color: var(--colorHeaderW);
 }
 .imageMPad{
     margin: 1.55vw;
@@ -336,6 +336,7 @@ nav {
 .imageL {
     width: calc(var(--wL) * 0.55);
     height: calc(var(--wL) * 0.55);
+    background-color: var(--colorHeaderW);
 }
 
 .gridSectionContainer{

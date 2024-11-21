@@ -42,7 +42,7 @@ class Sections{
                 {
                     name:"node",
                     description:this.langTexts.skills.skillsTech["node"],
-                    image:paths.skills["nodejs"]
+                    image:paths.skills["node"]
                 },
                 {
                     name:"linux",
@@ -67,8 +67,33 @@ class Sections{
                 {
                     name:"mongo",
                     description:this.langTexts.skills.skillsTech["mongo"],
-                    image:paths.skills["mongodb"]
-                }
+                    image:paths.skills["mongo"]
+                },
+                {
+                    name:"solidity",
+                    description:this.langTexts.skills.skillsTech["solidity"],
+                    image:paths.skills["solidity"]
+                },
+                {
+                    name:"flutter",
+                    description:this.langTexts.skills.skillsTech["flutter"],
+                    image:paths.skills["flutter"]
+                },
+                {
+                    name:"aws",
+                    description:this.langTexts.skills.skillsTech["aws"],
+                    image:paths.skills["aws"]
+                },
+                {
+                    name:"terraform",
+                    description:this.langTexts.skills.skillsTech["terraform"],
+                    image:paths.skills["terraform"]
+                },
+                {
+                    name:"scikit",
+                    description:this.langTexts.skills.skillsTech["scikit"],
+                    image:paths.skills["scikit"]
+                },
             ],
             content:[
                 {
@@ -153,53 +178,58 @@ class Sections{
                     {
                         place:this.langTexts.jobs.jobs[0]["name"],
                         position:this.langTexts.jobs.jobs[0]["position"],
-                        city:"Bogota",
+                        city:"Miami, Florida",
                         description:this.langTexts.jobs.jobs[0]["description"],
-                        date:"2016-2018",
-                        image:paths.jobs["husi"]
+                        date:"2022-2023",
+                        image:paths.jobs["mango"]
                     },
                     {
                         place:this.langTexts.jobs.jobs[1]["name"],
                         position:this.langTexts.jobs.jobs[1]["position"],
                         city:"Miami, Florida",
                         description:this.langTexts.jobs.jobs[1]["description"],
-                        date:"2018-2019",
-                        image:paths["none"]
-        
+                        date:"2022-2023",
+                        image:paths.jobs["stradata"]
                     },
                     {
                         place:this.langTexts.jobs.jobs[2]["name"],
                         position:this.langTexts.jobs.jobs[2]["position"],
-                        city:"Fort Lauderdale, Florida",
+                        city:"Bogota",
                         description:this.langTexts.jobs.jobs[2]["description"],
+                        date:"2021",
+                        image:paths.jobs["symplifica"]
+                    },
+                    {
+                        place:this.langTexts.jobs.jobs[3]["name"],
+                        position:this.langTexts.jobs.jobs[3]["position"],
+                        city:"Fort Lauderdale, Florida",
+                        description:this.langTexts.jobs.jobs[3]["description"],
                         date:"2020",
                         image:paths.jobs["biznaga"]
         
                     },
                     {
-                        place:this.langTexts.jobs.jobs[3]["name"],
-                        position:this.langTexts.jobs.jobs[3]["position"],
-                        city:"Bogota",
-                        description:this.langTexts.jobs.jobs[3]["description"],
-                        date:"2020-2021",
-                        image:paths.jobs["tulpep"]
-                    },
-                    {
                         place:this.langTexts.jobs.jobs[4]["name"],
                         position:this.langTexts.jobs.jobs[4]["position"],
-                        city:"Bogota",
+                        city:"Miami, Florida",
                         description:this.langTexts.jobs.jobs[4]["description"],
-                        date:"2021",
-                        image:paths.jobs["symplifica"]
+                        date:"2018-2019",
+                        image:paths["none"]
+        
                     },
                     {
                         place:this.langTexts.jobs.jobs[5]["name"],
                         position:this.langTexts.jobs.jobs[5]["position"],
-                        city:"Miami, Florida",
+                        city:"Bogota",
                         description:this.langTexts.jobs.jobs[5]["description"],
-                        date:"2022-2023",
-                        image:paths.jobs["stradata"]
+                        date:"2016-2018",
+                        image:paths.jobs["husi"]
                     },
+                    
+                    
+                   
+                    
+                    
                 ],
                 projects:[
                     {
@@ -226,12 +256,6 @@ class Sections{
                         url:paths.jobs["estadistica"][1],
                         image:paths.jobs["estadistica"][0]
                     },
-                    {
-                        name:this.langTexts.jobs.projects[3]["name"],
-                        description:this.langTexts.jobs.projects[3]["description"],
-                        url:paths.jobs["estadistica"][1],
-                        image:paths.jobs["estadistica"][0]
-                    }
                 ]
             },
             }

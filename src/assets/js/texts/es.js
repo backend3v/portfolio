@@ -32,7 +32,12 @@ const texts = {
             mongo:"Base de datos NoSQL orientada a documentos. Manejo grandes cantidades de datos",
             linux:"Sistema operativo Unix de código abierto. Conocido por su seguridad y flexibilidad",
             git:"Sistema de control de versiones distribuido. Permite el desarrollo colaborativo",
-            docker:"Implementación de aplicaciones dentro de contenedores ligeros y portátiles."
+            docker:"Implementación de aplicaciones dentro de contenedores ligeros y portátiles.",
+            solidity:"Dessarrollo de contratos inteligentes. Sobre red Blockchain",
+            flutter:"Desarrollo de aplicaciones Moviles",
+            aws:"Desarrollo de aplicaciones en la nube",
+            terraform:"Desarrollo de infraestructura en la nube",
+            scikit:"Desarrollo de aplicaciones de aprendizaje automático (IA)",
         },
         content:[
             {
@@ -86,10 +91,36 @@ const texts = {
         projectsT:"Proyectos",
         jobs:[
             {
-                name:"Hospital San Ignacio",
-                position:"Tecnico de Soporte TI",
+                name:"Mango Soft",
+                position:"Software Developer",
                 description:[
-
+                    "Desarrollo y mantenimiento de Software para la industria de Salud y Deporte",
+                    "Python, AWS(CloudFormation,Lambda functions, API’s, SQS, EventBridge), Blockchain, Solidity, Javascript(Angular), Typescript,Docker, Linux, Git, Bash, Docker"
+                ]
+                
+            },
+            {
+                name:"Stradata",
+                position:"Data Analyst and Software Developer",
+                description:[
+                    "Desarrollo de software, Integracion de modelos de ML y mantenimiento de aplicacion Laravel",
+                    "Python(SciKit Learn), MongoDB, PHP(Laravel), Javascript, Bash, Git, Docker, AWS, Linux"
+                ]
+            },
+            {
+                name:"Tulpep - Symplifica",
+                position:"Software Developer",
+                description:[
+                    "Desarrollo de Aplicacion web 2.0 de Symplifica",
+                    "Python(django), Ruby(On Rails), PHP( Simphony), Bash, Git, Docker, AWS, Linux"
+                ]
+            },
+            {
+                name:"Biznaga Media",
+                position:"Software Developer",
+                description:[
+                    "Desarrollo de Aplicaciones Web, Richmedia y servicios de analisis de campañas de marketing por Geolocalizacion",
+                    "PHP, Powershell, Javascript, Bash, Git"
                 ],
             },
             {
@@ -101,38 +132,20 @@ const texts = {
                 ],
             },
             {
-                name:"Biznaga Media",
-                position:"Software Developer",
+                name:"Hospital San Ignacio",
+                position:"Tecnico de Soporte TI",
                 description:[
-                    "Desarrollo de Aplicaciones Web, Richmedia y servicios de analisis de campañas de marketing por Geolocalizacion",
-                    "PHP, Powershell, Javascript, Bash, Git"
+                    "Soporte tecnico y mantenimiento de equipos informaticos",
+                    "Automatizacion de servicios y optimizacion de procesos",
+                    "Soporte primer nivel equipos Biotecnicos y medicos",
+                    "Soporte de Redes y Servicios de Internet",
                 ],
             },
-            {
-                name:"Tulpep - Symplifica",
-                position:"Software Developer",
-                description:[
-                    "Desarrollo de Aplicacion web 2.0 de Symplifica",
-                    "Python(django), Ruby(On Rails), PHP( Simphony), Bash, Git, Docker, AWS, Linux"
-                ]
-            },
-            {
-                name:"Stradata",
-                position:"Data Analyst and Software Developer",
-                description:[
-                    "Desarrollo de software, Integracion de modelos de ML y mantenimiento de aplicacion Laravel",
-                    "Python(SciKit Learn), MongoDB, PHP(Laravel), Javascript, Bash, Git, Docker, AWS, Linux"
-                ]
-            },
-            {
-                name:"Mango Soft",
-                position:"Software Developer",
-                description:[
-                    "Desarrollo y mantenimiento de Software para la industria de Salud y Deporte",
-                    "Python, AWS(CloudFormation,Lambda functions, API’s, SQS, EventBridge), Blockchain, Solidity, Javascript(Angular), Typescript,Docker, Linux, Git, Bash, Docker"
-                ]
-                
-            },
+           
+            
+            
+            
+            
 
         ],
         projects:[
