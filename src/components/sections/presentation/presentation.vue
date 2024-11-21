@@ -45,7 +45,7 @@ export default {
   },
   methods: {
       goTo(url){
-        this.$parent.goToUrl(url)
+        window.open(url, '_blank');
       },
       // qs(lang){
       //   const t = require(`@/assets/js/texts/${lang}`);

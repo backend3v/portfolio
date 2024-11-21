@@ -153,7 +153,9 @@ export default {
           }
         }
     },
-    
+    goToUrl(url){
+      window.open(url, '_blank');
+    },
     scrolling(direction){
         if(direction == "down"){
           this.position = (this.position + 1 > 359) ? 0 : this.position + 1
