@@ -1,6 +1,7 @@
 :root {
     --colorMain: rgb(46, 53, 59);
     --colorMainW: rgb(56, 63, 69);
+    --colorMainW2: rgb(106, 113, 119);
     --colorHeaderW: rgba(56, 63, 69,0.5);
     --colorHeader: rgba(46, 53, 59,0.2);
     --colorTransparent: rgba(0, 0, 0, 1);
@@ -82,6 +83,9 @@ body {
     overflow: hidden;
 
 }
+a{
+    color: var(--colorNeutral);
+}
 
 h1 {
     padding: 0%;
@@ -147,14 +151,26 @@ nav {
     background-color: var(--colorMain);
     display: flex;
 }
-
+.link{
+    cursor: pointer;
+    text-decoration: underline;
+}
 .bottonA {
     height: var(--hXS);
     display: grid;
     align-content: center;
     width: var(--wS);
     text-align: center;
-    background-color: var(--colorMainW);
+    background-color: var(--colorMainW2);
+    color:var(--colorMain);
+    /* border-radius: 5%; */
+    cursor: pointer;
+
+}
+.bottonA:hover {
+    background-color: var(--colorHeaderW);
+    color:var(--colorMainW2);
+    
 }
 
 #TContainer {

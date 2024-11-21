@@ -19,7 +19,7 @@
                     |{{ contacth.name }}
                   br
                   div(class="itemsCenter" v-for="contact in contacth.texts")
-                      h3(@click="goTo(contact[1])" v-if="contact[1] != ''")
+                      h3(@click="goTo(contact[1])" v-if="contact[1] != ''" class="link")
                         |{{ contact[0] }}
                       h3(v-else)
                         |{{ contact[0] }}

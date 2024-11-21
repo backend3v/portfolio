@@ -1,6 +1,8 @@
 <template lang="pug">
-  .footerContainer
-    |Ed
+  .footerContainer(class="itemsCenter" )
+    div(style="width:100%")
+      |Developed by 
+      <a href="https://www.linkedin.com/in/edward-gonzalez-60730771/" target="_blank"> Edward Camilo Gonzalez</a>
 </template>
 <script>
 
