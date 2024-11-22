@@ -41,7 +41,7 @@ const texts = {
         },
         content:[
             {
-                "name": "Análisis e Ingeniería de Datos",
+                "name": "Datos",
                 "texts": [
                     "Extracción, Tratamiento y Carga de Datos",
                     "Análisis estadístico Predictivo y Descriptivo de Datos",
